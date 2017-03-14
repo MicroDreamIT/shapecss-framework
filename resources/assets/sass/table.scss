@@ -1,0 +1,44 @@
+
+    
+    
+    .table{
+      border: 1px solid lightgrey; 
+      width:100%;
+      border-collapse:collapse ;
+      border-spacing:0;
+       
+    }
+    
+    .table>tbody>tr>td, .table>tbody>tr>th,
+    .table>tfoot>tr>td,
+    .table>tfoot>tr>th,
+    .table>thead>tr>td,
+    .table>thead>tr>th {
+          
+      padding: 8px 5px;
+      line-height: 1.42857143;
+      vertical-align: top;
+       //border: 1px solid #ddd;
+     } 
+    
+    .table tr{
+
+       border: 1px solid #dadada;
+        
+     } 
+    
+   .table.stripe tr:nth-child(even){
+        background:#d3d3d3;        
+     }    
+    
+    
+    tfoot,thead{ 
+      
+        font-weight:bold;
+        background: rgba(128, 128, 128, 0.16);      
+    }
+    
+ 
+     
+    
+    

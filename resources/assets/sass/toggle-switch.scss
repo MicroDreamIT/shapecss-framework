@@ -1,0 +1,56 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  input {display:none;}
+}
+
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(202, 202, 202, 0.63);
+  @include transition(0.4s);
+}
+
+
+.slider:before {
+  position:absolute;
+  content: "";
+  height:26px;
+  width:26px;
+  left:8px;
+  bottom: 7px;
+  background-color: $white;
+  @include transition(0.4s);
+}
+
+
+
+input:checked + .slider:before {
+  @include transform(translateX(26px));
+}
+
+//Round switch//
+
+.slider.round {
+  border-radius: 34px;
+
+  &:before {
+    border-radius: 50%;
+  }
+}
+
+@each $name,$value in $colors{
+  .bg-#{$name}{
+    input:checked + .slider {
+      background-color:  $value - 30;
+    }
+  }
+}

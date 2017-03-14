@@ -1,0 +1,59 @@
+.center{
+  text-align: center;
+  //margin: auto;
+}
+.small{
+  font-size: smaller;
+}
+.justify{
+  text-align: justify;
+}
+
+p.right{
+  float: right;
+}
+
+.hide{
+  display: none;
+}
+.title{
+  font-weight: bolder;
+}
+
+@each $value, $name in $colors{
+  .#{$value}{
+    color: $name;
+  }
+}
+
+h1, .h1{
+  font-size: rem-calc(70px);
+  margin: ($h1-fs/2) 0;
+}
+
+h2, .h2{
+  font-size: $h2-fs;
+  margin: ($h2-fs/2) 0;
+}
+
+h3, .h3{
+  font-size: $h3-fs;
+  margin: ($h3-fs/2) 0;
+}
+
+h4, .h4{
+  font-size: $h4-fs;
+  margin: ($h4-fs/2) 0;
+}
+
+h5, .h5{
+  font-size: $h5-fs;
+  margin: ($h5-fs/2) 0;
+}
+
+h6, .h6{
+  font-size: $h6-fs;
+  margin: ($h6-fs/2) 0;
+}
+
+

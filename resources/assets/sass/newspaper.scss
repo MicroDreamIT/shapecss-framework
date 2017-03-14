@@ -1,0 +1,9 @@
+
+
+@each $current in $column-list {
+      $i: index($column-list, $current);
+      .newspaper-col-#{$i} { 
+      	  @include newspaperElement;
+          column-count: $current;
+      }
+}

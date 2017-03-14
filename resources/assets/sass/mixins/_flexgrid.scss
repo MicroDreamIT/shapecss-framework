@@ -1,0 +1,12 @@
+@mixin grid($break-mobile:768px){  
+
+  display:flex;
+  flex-wrap: rowwrap;
+  padding: 5px;   
+       @media screen and (max-width: $break-mobile) {
+        flex-direction:column;
+         margin:0 auto;
+       } 
+
+}
+

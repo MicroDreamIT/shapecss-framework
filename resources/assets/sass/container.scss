@@ -1,0 +1,36 @@
+.row{
+  @include display-flex;
+  @include flex-wrap(wrap);
+  margin-bottom: rem-calc(5px);
+}
+
+
+.container-full{
+  @include container();
+}
+
+.container-flex{
+  @include container();
+  padding: rem-calc(20px);
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: rem-calc(15px);
+  padding-right: rem-calc(15px);
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

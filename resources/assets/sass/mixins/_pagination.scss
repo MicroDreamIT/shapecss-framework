@@ -1,0 +1,7 @@
+
+@mixin itemFirstLastChild($content:'\00ab',$border:1px solid $lightgrey,$padding:rem-calc(5px) rem-calc(8px),$color:$black){
+  content:$content;
+  border:$border;
+  padding:$padding;
+  color:$color;
+}

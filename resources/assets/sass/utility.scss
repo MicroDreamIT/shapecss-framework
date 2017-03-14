@@ -1,0 +1,89 @@
+.innerGap{
+  padding: 10px;
+}
+.clearfix{
+  @include clearfix;
+}
+
+.space-between{
+  @include justify-content(space-between);
+}
+.display-flex{
+  @include display-flex();
+}
+
+.align-items-center{
+  @include align-items(center);
+}
+.justify-content-center{
+ @include justify-content(center);
+}
+
+.justify-content-end{
+ @include justify-content(flex-end);
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.right-gap{
+  margin-right: 5px;
+}
+
+.left-gap{
+   margin-left: 5px;
+ }
+ @each $name,$value in $colors{
+   footer.bg-#{$name}, nav.bg-#{$name}, ul.bg-#{$name}{
+     li{
+       a{
+         @if $name == 'default' {
+           color:$dark !important;
+         }
+         @else {
+           color:$white !important;
+         }
+       };
+     }
+   }
+    .bg-#{$name}{
+    	background: $value !important;
+    	@if $name == 'default' {
+    		color:$dark !important;
+    	}
+    	@else {
+    		color:$white !important;
+    	}
+
+    }
+
+   .bg-#{$name}.copyright{
+    	background: $value - 20 !important;
+    	@if $name == 'default' {
+    		color:$dark !important;
+    	}
+    	@else {
+    		color:$white !important;
+    	}
+    }
+ }
+
+.gutter{
+  margin-top: 20px;
+}
+.right{
+  margin-left:auto !important;
+  @include float-right;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid\9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}

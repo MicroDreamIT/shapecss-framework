@@ -1,0 +1,130 @@
+@mixin caret($width,$direction,$color)
+{
+
+	display: inline-block;
+
+
+	@if($direction == ''){
+		height:0;
+	 	   width:0;
+		   border-left:$width solid transparent;
+		   border-right:$width solid transparent;
+		   border-bottom:$width solid $color;
+	}
+
+	 @if $direction == up {
+	 	   height:0;
+	 	   width:0;
+		   border-left:$width solid transparent;
+		   border-right:$width solid transparent;
+		   border-bottom:$width solid $color;
+	   } 
+
+	   @if $direction == down {
+	   	   height:0;
+	 	   width:0;
+		   border-left:$width solid transparent;
+		   border-right:$width solid transparent;
+		   border-top:$width solid $color;
+		   
+	   }
+
+	   @if $direction == left {
+	   	   height:0;
+	 	   width:0;
+		   border-top:$width solid transparent;
+		   border-right:$width solid $color;
+		   border-bottom:$width solid transparent;
+		   
+	   } 
+	     @if $direction == right {
+
+	       height:0;
+	 	   width:0;
+		   border-top:$width solid transparent;
+		   border-left:$width solid $color;
+		   border-bottom:$width solid transparent;
+		 
+	   } 
+
+	   @if $direction == top-left {
+
+	       height:0;
+	 	   width:0;
+		   border-top: $width solid $color; 		   
+		   border-right: $width solid transparent;
+		 
+	   }
+
+	   @if $direction == top-right {
+
+	       height:0;
+	 	   width:0;
+		   border-bottom: $width solid transparent; 		   
+		   border-right: $width solid $color;
+		   
+		 
+	   }
+	   @if $direction == bottom-right{
+
+	       height:0;
+	 	   width:0;
+		   border-top: $width solid transparent;
+           border-right: $width solid teal;
+
+	   }
+
+	   @if $direction == bottom-left{
+	       height:0;
+	 	   width:0;
+		   border-top: $width solid transparent;
+           border-left: $width solid teal;
+
+		 
+	   }
+
+}
+
+
+triangle-up{
+
+	@include caret (150px, up, teal);
+}
+
+triangle-down{
+
+	@include caret (150px, down, teal);
+}
+
+triangle-right{
+	@include caret (150px, right, teal);
+}
+
+triangle-left{
+	@include caret (150px, left, teal);
+}
+
+
+triangle-top-left{
+	@include caret (250px, top-left, teal);
+}
+
+triangle-top-right{
+	@include caret (250px, top-right, teal);
+}
+
+triangle-bottom-right{
+	@include caret (250px, bottom-right, teal);
+}
+
+triangle-bottom-left{
+	@include caret (250px, bottom-left, teal);
+}
+
+
+triangle{
+	@include caret (250px, '', teal);
+}
+
+
+

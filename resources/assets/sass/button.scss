@@ -1,0 +1,81 @@
+
+$box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+
+button.default, button.info, button.success, button.danger, button.warning, button.dark,button.primary{
+  font-size: 14px;
+  //padding:10px 10px;
+  @include display-flex(inline-flex);
+  @include justify-content(center);
+  @include align-items(center);
+  outline:none;
+  cursor:pointer;
+  margin:3px;
+  font-weight:bold;
+
+  //text-align: center;
+  border: none;
+  @include border-radius(2px);
+
+  transition: .3s ease-out;
+  @include box-shadow(0px 1px 5px grey);
+  &:hover{
+    transform:translateY(-2px);
+  }
+  &:active{
+    transform:translateY(3px);
+  }
+
+}
+// size l s
+ 
+
+@each $name, $value, $color in $colors {          //here is $name and $value is a paramiter for a loop
+	button.#{$name},button.#{$name}{
+	  	@include display-flex(inline-flex);
+		background: $value;
+      @if($name =='default'){
+        color:grey - 80;
+      }@else {
+        color: #fff;
+      }
+		  &:hover{
+		    background: $value - 25;
+		    box-shadow:$box-shadow;
+		  }
+   	  
+	}
+    	.#{$name}.l{
+    	  padding:15px 50px;
+    	  font-size:16px;
+    	}
+        .#{$name}.m{
+          padding:8px 8px;
+          font-size:14px;
+        }
+    	.#{$name}.s{
+    	  padding:3px 5px;
+    	  margin:3px;
+    	  border-radius:3px;
+    	  font-size:12px;
+    	  font-weight: normal;
+    	}
+    	
+    	.#{$name}.block{
+    	  display:flex;
+    	  align-items:center;
+    	  justify-content:center;
+    	  text-align:center;
+    	  padding:8px 10px;
+    	  margin:3px;
+    	  font-size:17px;
+    	  width:100%;
+    	}
+    	
+    	.#{$name}.disabled{
+       opacity:0.4;
+       cursor:no-drop;
+       color:$gray;
+    }
+	
+}
+

@@ -1,0 +1,90 @@
+//
+//
+//nav{
+//
+//  background: grey;
+//  margin:0;padding:0;
+//  width:100%;
+//
+//  ul,li a{
+//    margin:0; padding: 10px 10px; list-style:none;
+//  }
+//
+//  ul{
+//    display:flex;
+//    flex-direction:row;
+//    flex-wrap:wrap;
+//    align-items:center;
+//    justify-content:flex-start;
+//    width: 100%;
+//
+//    li{
+//       	text-align:center;
+//	      a{
+//	        text-decoration:none;
+//		        &:hover{
+//		          background: rgba(0, 0, 0, 0.04);
+//		          color:$primary;
+//		        }
+//	      }
+//
+//    }
+//
+//    li:first-child{
+//       background:transparent;
+//	       a:hover{
+//	       	background-color: transparent;
+//	       }
+//    }
+//
+//
+//  }
+//
+//}
+//
+//.icon-bar{
+//  display:none;
+//}
+//
+//
+//@media screen and(max-width:768px){
+//  .icon-bar{
+//    display: block;
+//    position: absolute;
+//    right: 5px;
+//    top: 5px;
+//    font-size: 18px;
+//    color: $gray;
+//    cursor:pointer;
+//    outline:none;
+//  }
+//
+//  .menu{
+//        flex-direction:column;
+//        width: 100%;
+//       @include transition(0.5s all);
+//       @include box-shadow(1px -3px 20px 0px $black);
+//
+//       li{
+//       	padding-top: rem-calc(5px);
+//       	a:hover{
+//            background:none;
+//            padding: rem-calc(6px) rem-calc(10px);
+//       	}
+//       }
+//
+//  }
+//
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

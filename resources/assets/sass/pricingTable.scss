@@ -1,0 +1,52 @@
+//fonts
+$font_0: Lucida Sans;
+$font_1: trebuchet MS;
+$font_2: Arial;
+$font_3: Helvetica;
+$font_4: Georgia;
+$font_5: Serif;
+
+//extends
+%extend_1 {
+  background: $color_apple_approx;
+  top: 2px;
+  box-shadow: 0 0 3px $black_70 inset;
+}
+.pricing-table {
+  @include display-flex();
+  @include justify-content('center');
+  @include align-items('center');
+  @include  flex-wrap('wrap');
+  margin: 9px 0px;
+  .plan {
+    @include pricePlan;
+  }
+  h3{
+    font-size: 26px; font-weight: normal;padding: 20px;margin: -20px -20px 50px -20px;
+    background-color: $color_gallery_approx; background-image: linear-gradient($white, $color_gallery_approx);
+    span{
+      display: block;  font: bold 25px/100px $font_4, $font_5; color:$color_tapa_approx;
+      background: $white;border: 5px solid $white; height: 100px; width: 100px;
+      margin: 10px auto -65px; border-radius: 100px; box-shadow: 0 5px 20px $color_alto_approx inset, 0 3px 0 $color_mountain_mist_approx inset;
+    }
+  }
+  ul {
+    margin: 20px 0 0;
+    padding:0;
+    list-style: none;
+    li {
+      border-top: 1px solid $color_alto_approx;
+      padding: 10px 0;
+    }
+  }
+}
+
+.plan.bg-primary,.bg-success,.bg-info,.bg-danger,.bg-warning,.bg-dark{
+  color:$white !important;
+  h3{
+    color:$darkgray;
+  }
+  button{
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  }
+}

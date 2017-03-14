@@ -1,0 +1,92 @@
+
+
+
+  //@each $name, $value, $color in $colors {
+  //    footer.bg-#{$name}.copyright{
+  //      @include display-flex();
+  //      background: $value - 20 ;
+  //      max-height:rem-calc(61px);
+  //      @include justify-content(space-around);
+  //    }
+  //}
+//}
+
+//@each $name, $value, $color in $colors {
+//  footer.bg-#{$name}{
+//            background: $value;
+//           @include box-shadow($shadow);
+//       .footer-item{
+//           p{   color:$white;
+//             @if($name =='default'){
+//                  color:grey - 80;
+//             }@else {
+//                  color: $white;
+//             }
+//           }
+//         ul{
+//           li{
+//             a{
+//                 @if($name =='default'){
+//                      color:grey - 80;
+//                 }@else {
+//                       color:$white;
+//                       font-size: rem-calc(14px);
+//                       font-weight: 300;
+//                   &:hover{
+//                      color:$value - 70;
+//                   }
+//                 }
+//             }
+//           }
+//         }
+//       }
+//
+//  }
+//
+
+//}
+
+  footer{
+    @include display-flex();
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(flex-start);
+    @include flex-wrap(wrap);
+    margin:0;
+    padding: rem-calc(15px) rem-calc(15px);
+    border:none;
+    background:transparent;
+    @include box-shadow($shadow);
+
+
+
+    .footer-item{
+//      //@include display-flex();
+//      //@include flex-direction(column);
+      @include flex(1);
+        p{
+          font-size: 23px;
+          font-weight: 500;
+          border-bottom: rem-calc(1px) solid;
+          padding-bottom: rem-calc(1px);
+        }
+      ul{
+        margin-top: rem-calc(5px);
+        li{
+          padding: rem-calc(2px) rem-calc(0px);
+            a{
+
+            }
+        }
+      }
+  }
+}
+  @media only screen and (max-width: 768px) {
+    footer {
+      @include flex-direction(column);
+      @include align-items(center !important);
+      .footer-item {
+        margin-bottom: 40px;
+      }
+    }
+  }

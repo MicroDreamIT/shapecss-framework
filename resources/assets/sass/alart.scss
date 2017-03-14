@@ -1,0 +1,62 @@
+
+ 
+		.alert{
+			@include Alert;
+
+			 .close{		 	 
+                 height:0;
+                 width:0;
+	                 &:after{
+	             		content: '\00d7';
+					    position: absolute;
+					    right: 7px;
+					    top: -13px;
+					    font-size: 14px;
+					    cursor:pointer;height: 0;
+	                 }
+		     }
+	    }
+
+	    @each $name, $value in $colors {
+	    	//color
+	    	.alert.#{$name} {
+	    		background-color: $value;
+	    		color: $white;
+	    	}
+
+	    }
+
+		 [class^="alert"].round{
+		 	border-radius: 30px;
+		 }
+
+
+
+    //mixins for topRight postion an alert box
+
+    @mixin LeftTop($position,$top,$right){
+    	position:$position;
+    	top:$top;
+    	right:$right;
+    	z-index: 100;   	    	
+    }
+
+
+
+		 .alert.top-right{
+		 	@include LeftTop($position:absolute,$top:5%,$right:5%);		 	
+		 }			
+
+	     .alert.top-left{
+	 	    @include rightTop($position:absolute,$top:5%,$left:5%);	 	  
+	      }
+
+	      .alert.bottom-right{
+	 	    @include bottomRight($position:absolute,$bottom:0%,$right:5%);	 	  
+	      }
+	      
+	      .alert.bottom-left{
+	 	    @include bottomLeft($position:absolute, $bottom:0%, $left:5%);	 	  
+	      }
+
+		 

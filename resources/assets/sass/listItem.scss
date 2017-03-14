@@ -1,0 +1,66 @@
+
+div.box-layout{
+	width:1170px;
+	margin: 0 auto ;
+	.leftSide{
+			width:50%;
+			float:left;
+		}
+
+	.rightSide{
+			width:50%;
+		    float:right;		       
+	}
+}
+
+
+	ul li{
+		list-style:none;
+	}
+
+	.list-group{
+		margin:2px;
+		padding:0;
+		@include display-flex();
+		@include flex-direction(column);
+      	@include box-shadow($shadow);
+
+		 .active{
+	        background:$lightgrey;
+	         a{
+	         	color:$white;
+	         	&:hover{
+	         		color:$white;
+	         	}
+	         }
+		 }
+	 	
+			li{
+				position: relative;	padding: 10px;margin-bottom:-1px;
+				border: 1px solid #ddd;
+				.badge,.badge-primary,.badge-success,.badge-info,.badge-warning,.badge-danger, .badge-dark, .badge-default{
+				   float:right;
+			     }
+
+			     a{
+			     		text-decoration: none;
+			     		color:$gray;
+			     		padding: 10px;
+                   @include transition(all 0.10s);
+
+					     		&:hover{
+					     			color:#6f6f6f;
+					     			cursor:pointer;
+								//&:after{
+								//   	content:" \00bb ";
+								//   }
+				     			}
+		     		      
+			     }
+
+
+			}
+			
+	}
+
+

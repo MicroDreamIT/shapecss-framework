@@ -1,0 +1,100 @@
+@mixin card-padding{
+	padding: rem-calc(10) rem-calc(8);
+}
+
+@mixin card-header-footer {
+		@include card-padding;
+	    margin-bottom: 0px;
+	    background-color: rgba(245, 245, 245, 0.51);
+}
+
+$header-footer-margin:1px solid rgba(0, 0, 0, 0.06);
+
+.card{
+	@include display-flex();
+	@include flex-direction(column);
+	border-radius: 2px;
+	box-shadow: $shadow;
+	@include transition(all .25s ease);
+	width: 100%;
+	img{
+		display:block;
+		width:100%;
+		border-bottom: 1px solid rgba(56, 56, 56, 0.12);
+	}
+	.header{
+		@include card-header-footer;
+	    border-bottom: $header-footer-margin;
+	}
+	.header-default{
+		@include card-header-footer;
+		background:none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+	}
+
+	.footer{
+		@include card-header-footer;
+	    border-top: $header-footer-margin;
+	}
+	.footer-default{
+		@include card-header-footer;
+		background: none;
+		border-top: 1px solid rgba(0, 0, 0, 0.07);
+	}
+
+	.body{
+		padding:rem-calc(15px);
+	}
+
+	&:hover{
+		@include transform(translateY(-1px)); 
+		box-shadow: $shadow-hover;
+	}
+}
+
+@each $name, $color in $colors{
+	.card.#{$name}{	
+		@if $name == 'default' {
+			    background: rgba(234, 234, 234, 0.16);
+    			color: #4e4e4e !important;
+		} @else {
+			background: $color;
+			color:white;		
+		}	
+	}
+}
+
+.card.dark{
+	@include background(linear-gradient(#123159,#0f294d));
+	color: white
+}
+
+.header.primary{
+  background: $primary;
+  color: white;
+}
+
+.header.dark{
+  background: $dark;
+  color: white;
+}
+
+.header.warning{
+  background: $info;
+  color: white;
+}
+
+.header.success{
+  background: $success;
+  color: white;
+}
+
+.header.info{
+  background: $info;
+  color: white;
+}
+.header.danger{
+  background: $danger;
+  color: white;
+}
+

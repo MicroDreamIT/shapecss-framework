@@ -1,0 +1,27 @@
+.top-bar{
+  @include display-flex();
+  @include flex-direction(row);
+  //@include flex-wrap(wrap);
+  background: #f5f5f5;
+  font-size: rem(18px);
+  @include flex(1);
+  padding-top: 3px;
+  padding-bottom: 27px;
+  .item{
+    //flex:1;
+    @include display-flex();
+    padding: 0 10px;
+    //@include flex(1);
+  }
+
+  .right{
+    @include display-flex();
+    flex: 1;
+    @include justify-content(flex-end);
+  }
+
+  a{
+    padding: 0 5px;
+  }
+}
+

@@ -1,0 +1,65 @@
+
+.breadcrumb {
+	background: $lightgrey;
+	li {
+		list-style: none;
+		display: inline-flex;
+		a {
+			padding: 10px 3px;
+			color: $default;
+			font-weight: 400;
+			&:after {
+				content: ' /';
+				color: $gray;
+			}
+		}
+	}
+}
+
+   @each $name, $value, $color in $colors {   
+			.breadcrumb.#{$name}{
+     		 		 	 background-color: $value;
+     		 		 	 li{
+	     		 		 	 	a{
+									@if($name=='default'){
+										color:$black;
+									}
+									@else{
+										color:$white;
+									}
+
+	     		 		 	 		&:after{
+	                                    content:' /';
+										@if($name=='default'){
+											color:$black;
+										}
+										@else{
+											color:$white;
+										}
+	     		 		 	 		}
+
+	     		 		 	 		&:hover{
+	     		 		 	 		  color:$gray;
+	     		 		 	 	    }
+
+	     		 		 	 	     
+	     		 		 	 	}
+
+     		 		 	 }
+
+     		 		 	 
+	 				} 
+			   }
+
+
+.breadcrumb li:last-child a::after,
+.breadcrumb li:last-child a::before {
+	content: none;
+}
+
+.breadcrumb .disabled{
+	color: $lightgrey !important;
+	pointer-events: none;
+	cursor:not-allowed !important;
+}
+

@@ -1,0 +1,9 @@
+.grid{
+	@include grid;
+
+	.cell{ 
+        flex:1;
+        // border:1px solid;
+        margin: 2px;   
+       }
+}

@@ -1,0 +1,64 @@
+.wrapper {
+  margin: 20px auto;
+}
+
+.container {
+  @include display-flex();
+  margin: 20px auto;
+}
+
+[class*="col-"] {
+  padding:$default-padding;
+}
+@media all and (max-width:500px) {
+  [class*="col-"]{
+    width: 100%;
+  }
+}
+@media all and (min-width: 500px) {
+
+  [class*="col-"] {
+    //margin-right: 20px;
+  }
+
+
+
+  [class*="col-"]:last-child {
+    margin-right: 0;
+  }
+
+  @for $i from 1 through 12 {
+    .col-#{$i}{
+      flex: $i;
+    }
+  }
+
+}
+
+@media all and (min-width: 1000px) {
+
+  .wrapper {
+    max-width: 1000px;
+  }
+
+  .container {
+    max-width: 1170px;
+  }
+
+}
+
+@media all and(max-width:768px){
+  .container{
+    @include flex-direction(column);
+  }
+}
+
+
+
+.space-left{
+  margin-left: 15px;
+}
+.space-right{
+  margin-right: 15px;
+}
+

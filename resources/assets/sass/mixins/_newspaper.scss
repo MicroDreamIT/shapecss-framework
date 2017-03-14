@@ -1,0 +1,8 @@
+@mixin newspaperElement(){
+    min-height:rem-calc(5px);	
+	background:$lightgrey;
+	column-count:3;
+	padding:rem-calc(10px);
+	column-gap:30px;
+}
+

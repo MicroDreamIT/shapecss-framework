@@ -1,0 +1,87 @@
+//Color Variables
+$inputColor:#4d4e4d;
+$light_white:rgba(236, 236, 236, 0.6);
+$yellow:#f0ad4e;
+$accordion-Bg:#0f294d;
+$white:#fffff;
+$black:#000;
+$gray:#4C4C4C;
+$lightRed:#DD5044;
+$darkgray:#636363;
+$deepBlue:#0078D7;
+$purple:#6F77FF;
+$lightgrey:#dedede;
+$darkGreen:#477960;
+$success:#5CB85C;
+$info:#5BC0DE;
+$default:rgba(230, 230, 230, 0.29);
+$primary:#337AB7;	      	           
+$danger:#D9534F;
+$warning:#F0AD4E;
+$dark: #123159;
+$active:#dedede;
+$grayTransparent:#d6d6d6;
+$white_80: rgba(255,255,255,.8);
+$white: #fff;
+$color_alto_approx: #ddd;
+$color_mine_shaft_approx: #333;
+$black_15: rgba(0, 0, 0, .15);
+$color_gallery_approx: rgb(212, 207, 207);
+$color_tapa_approx: #777;
+$color_mountain_mist_approx: #999;
+$color_mantis_approx: #72ce3f;
+$color_apple_approx: #62bc30;
+$black_30: rgba(0,0,0,.3);
+$white_50: rgba(255, 255, 255, .5);
+$black_70: rgba(0, 0, 0, .7);
+
+//stripe background
+ $info_stripe:repeating-linear-gradient(45deg, $info, $info 10px, #eee 10px, #d2d2d2 20px);
+ $success_stripe:repeating-linear-gradient(45deg, $success, $success 10px, #eee 10px, #d2d2d2 20px);
+ $primary_stripe:repeating-linear-gradient(45deg, $primary, $primary 10px, #eee 10px, #d2d2d2 20px);
+ $warning_stripe:repeating-linear-gradient(45deg, $warning, $warning 10px, #eee 10px, #d2d2d2 20px);
+ $danger_stripe:repeating-linear-gradient(45deg, $danger, $danger 10px, #eee 10px, #d2d2d2 20px);
+ $default_stripe:repeating-linear-gradient(45deg,$lightgrey,$lightgrey 10px, #eee 10px, #d2d2d2 20px);
+
+//shadows
+$shadow:1px 1px 4px 2px rgba(211, 211, 211, 0.41);
+$shadow-hover: 4px 4px 12px rgba(211, 211, 211, 0.64);
+//mixins
+
+$colors: (
+  'info': $info,
+  'dark' : $dark,
+  'danger': $danger,
+  'warning':$warning,
+  'primary': $primary,
+  'default': $default,
+  'success': $success,
+  );
+
+
+
+//typeography veriable
+//fs mean font-size
+
+// p element font size
+$p-fs:rem-calc(15px);
+
+// H element font size
+$h1-fs: rem-calc(60px);
+$h2-fs: rem-calc(50px);
+$h3-fs: rem-calc(40px);
+$h4-fs: rem-calc(30px);
+$h5-fs: rem-calc(20px);
+$h6-fs: rem-calc(15px);
+
+
+// variable for newspaper area
+$default-padding:rem-calc(10px);
+
+$column-list: 1, 2, 3, 4, 5, 6;
+
+
+
+
+
+ 

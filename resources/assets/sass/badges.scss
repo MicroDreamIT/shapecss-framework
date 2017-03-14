@@ -1,0 +1,49 @@
+
+	 @mixin badge($background:  #f1a401){
+			display: inline-block;
+			padding: rem-calc(4px) rem-calc(9px);
+			font-size: rem-calc(11px);
+			font-weight: 700;
+			line-height: 1;
+			color: #fff;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			background-color: $background;
+			border-radius: 11px;
+			margin-left: 3px;
+			font-weight:300; 
+	 }
+
+
+	.badge{
+		@include badge($lightgrey);
+		color: $gray;
+	}
+
+
+	.badge-default{
+		@include badge($default - 20%);
+        color:$gray !important;
+	}
+     .badge-primary{
+		@include badge($primary);
+	}
+
+	.badge-success{
+		@include badge($success);	
+	}
+
+	.badge-info{
+		@include badge($info);	
+	} 
+	.badge-danger{
+		@include badge($danger);	
+	} 
+
+	.badge-warning{
+		@include badge($warning);	
+	}
+     .badge-dark{
+		@include badge($dark);
+	}

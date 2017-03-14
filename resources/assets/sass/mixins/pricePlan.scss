@@ -1,0 +1,24 @@
+
+
+@mixin pricePlan(){
+  margin: 8px 8px;
+  font: 12px $font_0, $font_1, $font_2, $font_3;
+  text-shadow: 0 1px $white_80;
+  //background: transparent;
+  border: 1px solid $grayTransparent;
+  color:$dark;
+  text-align: center;
+  padding: 20px;
+  width: 180px;
+  float: left;
+  position: relative;
+  border-radius: 5px;
+  h3 {
+    border-radius: 5px 0 0 0;
+  }
+  button{
+    display:inline;
+  }
+
+
+}

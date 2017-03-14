@@ -1,0 +1,112 @@
+@mixin progressbar($color:$white,$weight:bold){
+  float: left; width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 25px;
+  color: $black;
+  font-weight:$weight;
+  text-align: center;
+  @include box-shadow(inset 2px 1px 2px 1px rgba(0, 0, 0, 0.15));
+  @include transition(width .6s ease);
+}
+
+@mixin p_bar_default($background:$default){
+  background:$light_white;
+  @include progressbar;
+}
+.progress-bar{
+  @include p_bar_default;
+}
+
+
+
+
+
+//----------------for All stripe classes-------------------------
+
+
+//info stripe
+@mixin p_bar_info_stripe($background:$info_stripe){
+  background:$background;
+  @include progressbar;
+}
+.progress-bar-info-stripe{
+  @include p_bar_info_stripe;
+  animation-name:popup_text;
+  animation-duration: 2s;
+}
+
+//success stripe
+
+@mixin p_bar_success_stripe($background:$success_stripe){
+  background:$background;
+  @include progressbar;
+}
+.progress-bar-success-stripe{
+  @include p_bar_success_stripe;
+  animation-name:popup_text;
+  animation-duration: 2s;
+}
+
+//primary stripe
+
+@mixin p_bar_primary_stripe($background:$primary_stripe){
+  background:$background;
+  @include progressbar;
+}
+.progress-bar-primary-stripe{
+  @include p_bar_primary_stripe;
+  animation-name:popup_text;
+  animation-duration: 2s;
+}
+
+//warning stripe
+
+@mixin p_bar_warning_stripe($background:$warning_stripe){
+  background:$background;
+  @include progressbar;
+}
+.progress-bar-warning-stripe{
+  @include p_bar_warning_stripe;
+  animation-name:popup_text;
+  animation-duration: 2s;
+}
+
+//danger stripe
+
+@mixin p_bar_danger_stripe($background:$danger_stripe){
+  background:$background;
+  @include progressbar;
+}
+.progress-bar-danger-stripe{
+  @include p_bar_danger_stripe;
+  animation-name:popup_text;
+  animation-duration: 2s;
+}
+
+//default stripe
+
+@mixin p_bar_default_stripe($background:$default_stripe){
+  background:$background;
+  @include progressbar;
+}
+.progress-bar-default-stripe{
+  @include p_bar_default_stripe;
+  animation-name:popup_text;
+  animation-duration: 2s;
+}
+
+
+
+
+//mixin animate
+
+
+@-webkit-keyframes popup_text{
+  0% {font-size: 14px;}
+  50% {font-size: 18px; color:$danger}
+  100% {font-size: 14px;}
+}
+
+
+

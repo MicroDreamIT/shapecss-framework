@@ -1,0 +1,33 @@
+@mixin circle($background: teal, $border: 2px solid #fb8da0, $radius: 200px) {
+	width: $radius;
+	height: $radius;
+	background: $background;
+	line-height: $radius;
+	vertical-align: middle;
+	text-align: center;
+	font-size: $radius/5;
+	-moz-border-radius: $radius/2;
+	-webkit-border-radius: $radius/2;
+	border-radius: $radius/2;
+	border:$border;
+}
+circle{
+	display: inline-block;
+	@include circle;
+	@include transition(all 2.0s ease-in-out);
+}
+@mixin oval($value,$background){
+	height:$value;
+	width:$value*2;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	 border-radius:  100%;
+	 display: inline-block;
+	 background:$background;
+	 text-align:center;
+	 line-height:147px;
+	 font-size:40px;
+}
+oval{
+    @include oval(150,teal);
+}

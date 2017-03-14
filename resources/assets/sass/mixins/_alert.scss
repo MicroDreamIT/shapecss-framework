@@ -1,0 +1,42 @@
+ @mixin Alert ($background:#eee,$color:#808080){ 
+		    white-space: nowrap;
+		    display: block;
+		    height: 50px;
+		    max-width: 500px;
+		    line-height: 50px;
+		    padding: 2px 30px;
+		    box-shadow: 0px 0px 9px 4px rgba(78, 78, 78, 0.22);
+		    background-color:$background;		    
+		    font-size: 17px;
+		    font-weight: 400;
+		    color: $color;
+		    border-radius: 3px;
+		    margin-bottom: 10px;
+	 }
+
+
+	   //mixins for topLeft postion an alert box
+
+	    @mixin rightTop($position,$top,$left){
+	    	position:$position;
+	    	top:$top;
+	    	left:$left; 
+	    	z-index: 100;  	    	
+	    }
+
+	    //mixins for bottomRight postion an alert box
+
+	    @mixin bottomRight($position, $bottom, $right){
+	    	position:$position;
+	    	bottom:$bottom;
+	    	right:$right; 
+	    	z-index: 100;  	    	
+	    }
+	    //mixins for bottomLeft postion an alert box
+
+	    @mixin bottomLeft($position, $bottom, $left){
+	    	position:$position;
+	    	bottom:$bottom;
+	    	left:$left; 
+	    	z-index: 100;  	    	
+	    }

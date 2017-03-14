@@ -1,0 +1,60 @@
+
+@mixin square($width: 150px, $background-color: teal){
+
+	height:$width;
+	width:$width;
+	background:$background-color;
+	line-height: $width;
+  	vertical-align: middle;
+  	text-align: center;
+    font-size: 15px;
+    border: 1px solid pink;	
+}
+
+@mixin rectangle($height:100px,$width:150px,$background-color:teal){
+
+	height:$height;
+	width:$width;
+	background:$background-color;
+	line-height: $height;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid pink;		
+	
+}
+
+@mixin parallelogram($height:150px,$width:100px,$background-color:teal){
+
+	height:$height;
+	width:$width;
+	background:$background-color;
+	line-height: $height;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid pink;	
+	-webkit-transform: skew(20deg);
+	-moz-transform: skew(20deg);
+	-o-transform: skew(20deg);	
+	transform: skew(20deg);	
+	
+}
+
+
+
+square{
+     display: inline-block;
+	 @include square;
+}
+
+parallelogram{
+     display: inline-block;
+	 @include parallelogram;
+}
+
+
+rectangle{
+     display: inline-block;
+	 @include rectangle;
+}

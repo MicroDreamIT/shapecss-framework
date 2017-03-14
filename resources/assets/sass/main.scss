@@ -1,0 +1,77 @@
+/*!
+ * ShapeCss 2.0
+ * Copyright 2016-2017 MicroDreamIT.
+ * Licensed under MIT (https://github.com/MicroDreamIT/Shapecss/blob/master/LICENSE)
+ */
+			@import "assets/_compass";
+			@import "assets/juice";
+			@import 'variables';
+			@import "mixins/mixins";
+			@import "tags";
+			@import "pagination";
+			@import "progress";
+			@import "container";
+			@import 'button';
+			@import 'buttonGroup';
+			@import 'box';
+			@import 'FormElement';
+			@import 'modal';
+			@import 'filterList';
+			@import 'breadCrumbs';
+			@import 'badges';
+			@import 'alart';
+			@import "card";
+			@import "listItem";
+			@import "dropdown";
+			@import "toolTip";
+			@import "tabs";
+			@import "table";
+            @import "typeography";
+			@import "toggle-switch";
+			@import "Accordion";
+			@import "navFlex";
+            @import "top-bar";
+            @import "pricingTable";
+			@import "tabs";
+			@import "grid";
+            @import "footer";
+			@import "utility";
+			@import "newspaper";
+			@import "screen";
+			@import "shapes/main";
+			
+
+            @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
+			@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+
+			
+
+
+//layout css 
+
+ 
+body{
+	//background: rgba(169, 169, 169, 0.46);
+}
+
+
+	  .presentation{
+		  	height:auto;		  	
+		  	padding:20px;		  	
+		  	margin:auto;
+		  	text-align: center;
+
+		  	h1{
+				font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+				font-size: 50px;
+				padding: 8px 0px;
+				text-align: center;
+				text-transform: uppercase;				
+				color: #202020;				
+				letter-spacing: .1em;
+				text-shadow: -1px -1px 1px #111111, 2px 2px 1px #363636;
+		  	}
+
+	  }
+
+	 

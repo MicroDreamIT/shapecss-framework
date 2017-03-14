@@ -1,0 +1,110 @@
+
+		
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background: rgba(14, 14, 14, 0.82);
+
+}
+
+
+
+
+
+ 
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding:0px;
+    border: 1px solid #888;
+    width: 80%;
+    position :relative;
+    box-shadow: -1px 3px 27px rgba(0, 0, 0, 0.86);
+
+        .modal-body{
+            padding: 10px;
+            font-family:initial;
+            text-align: justify;
+            border-bottom: 1px solid #fff5f5;
+            color: #525252;
+        }
+
+             .modal-header{
+                height: 50px;
+                background:$lightgrey !important;
+                color:$dark;
+                text-align: center;
+                font-size:24px;
+                line-height:50px;
+                border-bottom: 2px solid #d6d6d6;
+
+                .close{
+                    position: absolute; 
+                    top: -3px; right:
+                     13px; color: #c3c3c3;
+                        float: right;
+                        font-size: 28px;
+                        font-weight: bold;
+                        cursor:pointer;
+                 }
+            }
+
+            .modal-footer{
+                    min-height:38px;
+                    padding:10px;    
+                }
+
+
+        }
+
+
+
+    @mixin linkStyle{
+        color:#000; 
+        border:none;     
+        padding:12px 8px;
+        font-size:15px;       
+        min-width:150px;
+        margin-right:10px;
+        outline:none;
+        text-decoration:none;
+        border:1px solid rgba(238, 238, 238, 0.74);
+        transition:all 0.5s;
+    }
+
+    @mixin floatLeft{
+        float:left;
+        margin-left:10px;
+    }
+    
+    @mixin floatRight{
+        float:right;
+         margin-right:10px;
+    }
+
+
+    .link-right{
+
+         @include floatRight;
+         @include linkStyle;
+             &:hover{
+                    background: #002C3A;
+                    color: $default;
+             }
+        }
+
+    .link-left{
+
+         @include floatLeft;
+         @include linkStyle;
+    }
+
+ 

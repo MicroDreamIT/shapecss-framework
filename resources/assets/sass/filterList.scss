@@ -1,0 +1,53 @@
+
+#myInput {
+  background-image: url('http://www.w3schools.com/css/searchicon.png');
+  background-position: rem-calc(10px) rem-calc(12px);
+  background-repeat: no-repeat;
+  font-size: rem-calc(16px);
+  padding: rem-calc(12px) rem-calc(20px) rem-calc(12px)  rem-calc(40px);
+  border: rem-calc(1px) solid #ddd;
+  margin-bottom: 12px;
+  &:focus{
+    outline:none;
+    border:2px dashed $lightgrey;
+  }
+}
+
+#filter-items {
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+}
+
+#filter-items li a {
+  border: rem-calc(1px) solid #ddd;
+  margin-top: rem-calc(-1px);
+  background-color: #f6f6f6;
+  padding: rem-calc(12px);
+  text-decoration: none;
+  font-size: rem-calc(18px);
+  color: $dark;
+  display: block
+}
+
+#filter-items li a.heading-title {
+  background-color: #e2e2e2;
+  cursor: default;
+}
+
+#filter-items li a:hover:not(.heading-title) {
+  background-color: #eee;
+}
+
+@each $name,$value in $colors{
+  #filter-items li a.heading-title.#{$name}{
+    @if($name == 'default') {
+      color:gray;
+    }@else{
+      background-color: $value;
+      color:$white;
+    }
+
+  }
+
+}
