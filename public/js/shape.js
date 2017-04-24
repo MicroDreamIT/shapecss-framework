@@ -75,6 +75,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component_Accordion__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component_Modal__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__component_Tab__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_shapes_Circle__ = __webpack_require__(9);
+
 
 
 
@@ -86,6 +88,7 @@ window.onload = function () {
   new __WEBPACK_IMPORTED_MODULE_0__component_Accordion__["a" /* Accordion */]();
   new __WEBPACK_IMPORTED_MODULE_1__component_Modal__["a" /* Modal */]();
   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__component_Tab__["a" /* getTab */])();
+  new __WEBPACK_IMPORTED_MODULE_3__component_shapes_Circle__["a" /* Circle */]();
 };
 
 /***/ }),
@@ -245,6 +248,94 @@ function getTab() {
 __webpack_require__(0);
 module.exports = __webpack_require__(1);
 
+
+/***/ }),
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Circle; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Circle = function () {
+    function Circle() {
+        _classCallCheck(this, Circle);
+
+        var circles = document.getElementsByTagName('circle');
+
+        for (var i = 0; i < circles.length; i++) {
+            this.findCircleElement(circles[i]);
+        }
+
+        var circleClasses = document.getElementsByClassName('circle');
+
+        for (var i = 0; i < circleClasses.length; i++) {
+            this.findCircleElement(circleClasses[i]);
+        }
+    }
+
+    _createClass(Circle, [{
+        key: 'findCircleElement',
+        value: function findCircleElement(circle) {
+
+            if (circle.hasAttribute('shape-radius')) {
+                getRadius();
+            }
+
+            if (circle.hasAttribute('shape-background')) {
+                getBackground();
+            }
+
+            if (circle.hasAttribute('shape-border')) {
+                getBorder();
+            }
+
+            function getBorder() {
+                var border = circle.getAttribute('shape-border');
+
+                if (border.indexOf(',')) {
+                    var match = border.split(/\s*,\s*/);
+
+                    circle.style.border = match[0] + 'px solid ' + match[1];
+                } else {
+                    circle.style.border = border;
+                }
+            }
+
+            function getBackground() {
+                var background = circle.getAttribute('shape-background');
+                circle.style.backgroundColor = background;
+            }
+
+            // radius method start
+            function getRadius() {
+                var radius = circle.getAttribute('shape-radius');
+
+                var value = radius.replace(/[^0-9]/g, '');
+                var unit = radius.replace(/[0-9]/g, '');
+
+                if (unit == '%') {
+                    unit = 'em';
+                }
+
+                radius = Number(value) + unit;
+                circle.style.width = radius;
+                circle.style.height = radius;
+                circle.style.borderRadius = Number(value) / 2 + unit;
+                circle.style.MozBorderRadius = Number(value) / 2 + unit;
+                circle.style.WebkitBorderRadius = Number(value) / 2 + unit;
+                circle.style.lineHeight = radius;
+            }
+        }
+    }]);
+
+    return Circle;
+}();
 
 /***/ })
 /******/ ]);

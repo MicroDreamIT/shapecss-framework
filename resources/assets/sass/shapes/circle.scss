@@ -1,4 +1,4 @@
-@mixin circle($background: teal, $border: 2px solid #fb8da0, $radius: 200px) {
+@mixin circle($background: $info, $border: 2px solid $primary, $radius: 200px) {
 	width: $radius;
 	height: $radius;
 	background: $background;
@@ -6,9 +6,7 @@
 	vertical-align: middle;
 	text-align: center;
 	font-size: $radius/5;
-	-moz-border-radius: $radius/2;
-	-webkit-border-radius: $radius/2;
-	border-radius: $radius/2;
+	@include border-radius($radius/2);
 	border:$border;
 }
 circle{
@@ -16,6 +14,15 @@ circle{
 	@include circle;
 	@include transition(all 2.0s ease-in-out);
 }
+.circle{
+	display: inline-block;
+	@include circle;
+	@include transition(all 2.0s ease-in-out);
+	i{
+		font-size: rem-calc(21px);
+	}
+}
+
 @mixin oval($value,$background){
 	height:$value;
 	width:$value*2;
@@ -30,4 +37,17 @@ circle{
 }
 oval{
     @include oval(150,teal);
+}
+
+$circle-button-redius : 70px;
+
+button.circle{
+	outline:none;
+	width: $circle-button-redius;
+	height: $circle-button-redius;
+	background: $default;
+	line-height:0;
+	text-align: center;
+	@include border-radius($circle-button-redius/2);
+	font-size: 11px;
 }
