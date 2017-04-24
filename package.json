@@ -9,7 +9,10 @@
   },
   "devDependencies": {
     "cross-env": "^3.2.3",
-    "laravel-mix": "^0.7.2",
+    "laravel-mix": "^0.10.0",
     "lodash": "^4.17.4"
+  },
+  "dependencies": {
+    "laravel-mix": "^0.10.0"
   }
 }
