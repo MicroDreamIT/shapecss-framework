@@ -11,5 +11,5 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js/shape.js')
+mix.js('resources/assets/js/shape.js', 'public/js/shape.js')
    .sass('resources/assets/sass/main.scss', 'public/css/shape.css');
