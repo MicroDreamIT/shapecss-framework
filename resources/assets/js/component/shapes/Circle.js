@@ -2,16 +2,17 @@ export class Circle {
 
     constructor() {
 
+        let i;
         let circles = document.getElementsByTagName('circle');
 
-            for (var i = 0; i < circles.length; i++) {
-                this.findCircleElement(circles[i]);
-            }
+        for (i = 0; i < circles.length; i++) {
+            this.findCircleElement(circles[i]);
+        }
 
 
         let circleClasses = document.getElementsByClassName('circle');
 
-        for (var i = 0; i < circleClasses.length; i++) {
+        for (i = 0; i < circleClasses.length; i++) {
             this.findCircleElement(circleClasses[i]);
         }
     }
@@ -32,15 +33,25 @@ export class Circle {
             getBorder();
         }
 
+        if(circle.hasAttribute('transition')){
+            getTransition();
+        }
+
+
+        function getTransition() {
+            let transition =circle.getAttribute('transition');
+            if(transition=='off')
+            circle.style.transition = 'none';
+        }
 
         function getBorder() {
             let border = circle.getAttribute('shape-border');
 
             if (border.indexOf(',')) {
                 let match = border.split(/\s*,\s*/);
-                
+
                 circle.style.border= match[0] + 'px solid ' + match[1];
-                             
+
             } else {
                 circle.style.border = border;
             }

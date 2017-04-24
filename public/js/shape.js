@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -75,7 +75,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component_Accordion__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component_Modal__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__component_Tab__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_shapes_Circle__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_shapes_Circle__ = __webpack_require__(5);
 
 
 
@@ -243,17 +243,6 @@ function getTab() {
 
 /***/ }),
 /* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(0);
-module.exports = __webpack_require__(1);
-
-
-/***/ }),
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -266,15 +255,16 @@ var Circle = function () {
     function Circle() {
         _classCallCheck(this, Circle);
 
+        var i = void 0;
         var circles = document.getElementsByTagName('circle');
 
-        for (var i = 0; i < circles.length; i++) {
+        for (i = 0; i < circles.length; i++) {
             this.findCircleElement(circles[i]);
         }
 
         var circleClasses = document.getElementsByClassName('circle');
 
-        for (var i = 0; i < circleClasses.length; i++) {
+        for (i = 0; i < circleClasses.length; i++) {
             this.findCircleElement(circleClasses[i]);
         }
     }
@@ -293,6 +283,15 @@ var Circle = function () {
 
             if (circle.hasAttribute('shape-border')) {
                 getBorder();
+            }
+
+            if (circle.hasAttribute('transition')) {
+                getTransition();
+            }
+
+            function getTransition() {
+                var transition = circle.getAttribute('transition');
+                if (transition == 'off') circle.style.transition = 'none';
             }
 
             function getBorder() {
@@ -336,6 +335,14 @@ var Circle = function () {
 
     return Circle;
 }();
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(0);
+module.exports = __webpack_require__(1);
+
 
 /***/ })
 /******/ ]);
