@@ -25,6 +25,9 @@ $header-footer-margin:1px solid rgba(0, 0, 0, 0.06);
 	.header{
 		@include card-header-footer;
 	    border-bottom: $header-footer-margin;
+		.center{
+			@include flex(1);
+		}
 	}
 	.header-default{
 		@include card-header-footer;
@@ -35,6 +38,9 @@ $header-footer-margin:1px solid rgba(0, 0, 0, 0.06);
 	.footer{
 		@include card-header-footer;
 	    border-top: $header-footer-margin;
+		.center{
+			@include flex(1);
+		}
 	}
 	.footer-default{
 		@include card-header-footer;
@@ -52,17 +58,6 @@ $header-footer-margin:1px solid rgba(0, 0, 0, 0.06);
 	}
 }
 
-@each $name, $color in $colors{
-	.card.#{$name}{	
-		@if $name == 'default' {
-			    background: rgba(234, 234, 234, 0.16);
-    			color: #4e4e4e !important;
-		} @else {
-			background: $color;
-			color:white;		
-		}	
-	}
-}
 
 .card.dark{
 	@include background(linear-gradient(#123159,#0f294d));

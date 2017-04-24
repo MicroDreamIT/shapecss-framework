@@ -1,22 +1,40 @@
+img{
+  .center{
+    margin:0 auto;
+  }
+}
+.img-responsive{
+  border-radius: rem-calc(3px);
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-bordered{
+  @extend .img-responsive;
+  border:3px solid #cacaca;
+}
+.img-circle{
+  @extend .img-bordered;
+  @include border-radius(50%);
+}
+
 .innerGap{
   padding: 10px;
 }
-.clearfix{
-  @include clearfix;
-}
-
 .space-between{
   @include justify-content(space-between);
 }
 .display-flex{
   @include display-flex();
 }
-
 .align-items-center{
   @include align-items(center);
 }
 .justify-content-center{
  @include justify-content(center);
+}
+.space-around{
+  @include justify-content(space-around);
 }
 
 .justify-content-end{
@@ -24,7 +42,7 @@
 }
 
 .space-between{
-  justify-content: space-between;
+  @include justify-content(space-between);
 }
 
 .right-gap{
@@ -34,8 +52,18 @@
 .left-gap{
    margin-left: 5px;
  }
+.text-center{
+  text-align: center;
+}
+
+
+/* All the color loop must be placed in here
+// to minimize code complexities and weight
+// of this framework */
  @each $name,$value in $colors{
-   footer.bg-#{$name}, nav.bg-#{$name}, ul.bg-#{$name}{
+   footer.bg-#{$name},
+   nav.bg-#{$name},
+   ul.bg-#{$name}{
      li{
        a{
          @if $name == 'default' {
@@ -47,8 +75,11 @@
        };
      }
    }
+
+   .card.#{$name},
+   .alert.#{$name},
     .bg-#{$name}{
-    	background: $value !important;
+      @include background($value !important);
     	@if $name == 'default' {
     		color:$dark !important;
     	}
@@ -58,8 +89,9 @@
 
     }
 
+   .top-bar.bg-#{$name},
    .bg-#{$name}.copyright{
-    	background: $value - 20 !important;
+     @include background($value - 20 !important);
     	@if $name == 'default' {
     		color:$dark !important;
     	}
@@ -67,8 +99,10 @@
     		color:$white !important;
     	}
     }
+
  }
 
+//end of color loops
 .gutter{
   margin-top: 20px;
 }
@@ -86,4 +120,52 @@
   border-top: 4px solid\9;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
+}
+
+.no-shadow{
+  @include box-shadow(none !important);
+}
+.text-justify{
+  text-align: justify;
+}
+.full-width{
+  @include flex(1 100%);
+}
+.flex-column{
+  @include flex-direction(column)
+}
+
+.clearfix{
+  @include clearfix;
+}
+.break{
+  @include flex-basis(100%);
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+//framework body custom css
+
+.custom_column_style{@include box-shadow(0 0 1px #c5c5c5);}
+
+.no-margin{
+  margin-top: rem-calc(-24px);
+}
+.gap,
+.griding {
+  margin-bottom:rem-calc( 20px);
+  min-height: rem-calc( 30px);
+  margin-right: rem-calc( 5px);
+  @include box-shadow(2px 5px 9px rgba(0, 0, 0, 0.27));
+}
+.markup-pre-button{
+  color: rgba(64, 64, 64, 0.74);
+}
+.with-border{
+  border:1px solid $lightgrey;
+}
+
+.with-shadow{
+ @include box-shadow($shadow);
 }

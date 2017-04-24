@@ -17,14 +17,14 @@
 		     }
 	    }
 
-	    @each $name, $value in $colors {
-	    	//color
-	    	.alert.#{$name} {
-	    		background-color: $value;
-	    		color: $white;
-	    	}
-
-	    }
+	    //@each $name, $value in $colors {
+	    //	//color
+	    //	.alert.#{$name} {
+	    //		background-color: $value;
+	    //		color: $white;
+	    //	}
+        //
+	    //}
 
 		 [class^="alert"].round{
 		 	border-radius: 30px;

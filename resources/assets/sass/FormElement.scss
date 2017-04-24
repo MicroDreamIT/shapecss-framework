@@ -1,98 +1,78 @@
 form{
-    @include display-flex();
-    @include flex-direction(column);
-    @include flex-wrap(wrap);
-    padding: rem-calc(10px);
+  display:block;
+  padding: rem-calc(10px);
 }
 
-
-form-element{
+form-element,
+.form-element{
   @include flex(1);
-    @include align-items(center);
-  margin-bottom: rem-calc(2px);
+  //@include align-items(center);
+  margin-bottom: rem-calc(6px);
 }
-
-
 label{
-  padding: 2px;
+  padding: rem-calc(2px);
 }
-
 .input-item{
-  height: rem-calc(27px);
+  height: rem-calc(30px);
   width: 100%;
   color:$inputColor;
-  border: 2px solid $lightgrey;
+  border: 1px solid $lightgrey;
   @include border-radius(3px);
   padding-left:rem-calc(5px);
-          &:focus{
-            background: rgba(228, 226, 226, 0.62);
-            border: 2px solid rgba(255, 255, 255, 0.7);
-            @include box-shadow(1px 1px 6px 0px rgba(199, 199, 199, 0.82));
-            outline:none;
-            @include transition(all 0.2s ease-in);
-          }
+  &:focus{
+    background: rgba(228, 226, 226, 0.62);
+    border: 1px solid rgba(169, 168, 168, 0.7);
+    //@include box-shadow(1px 1px 6px 0px rgba(199, 199, 199, 0.82));
+    outline:none;
+    @include transition(all 0.2s ease-in);
+  }
 }
-
 .inline{
   display: flex;
   flex-direction: row;
-      .input-item{
-        margin-right: rem-calc(10px);
-      }
-      .input-item:last-child{
+  button{
+    margin: 0;
+  }
+  .input-item{
+    margin-right: rem-calc(10px);
+  }
+  .input-item:last-child{
     margin-right: 0;
   }
-
 }
-//@include input-placeholder {
-//  font-weight: normal;
-//}
-
-
 textarea.input-item{
-  min-height:120px;
+  min-height:rem-calc(120px);
   width:100%;
-  //padding:10px;
 }
-
 .side-by{
-      .input-item{
-            margin-right:0 !important;
-            border-radius: 0;
+  .input-item{
+    margin-right:0 !important;
+    border-radius: 0;
+  }
+  label{
+    border-radius: 0;
+    height: rem-calc(23.5px);
+    color: #4a4a4a;
+    padding-right: 4px;
+  }
+
+  @each $name,$value in $colors{
+    label.#{$name}{
+      background: $value;
+      @if $name == "default"{
+        color:$dark;
+        background: $lightgrey !important;
+      }@else{
+        color:$white;
       }
-      label{
-        background: #dedede;
-        border-radius: 0;
-        height: rem-calc(23.5px);
-        color: #4a4a4a;
-        padding: rem-calc(5px) rem-calc(12px);
-
-      }
-
-      @each $name,$value in $colors{
-        label.#{$name}{
-          background: $value;
-          @if $name == "default"{
-            color:$dark;
-            background: $lightgrey !important;
-          }@else{
-            color:$white;
-          }
-
-
-
-        }
-      }
-
+    }
+  }
 }
-
-
-
 label{
   padding: 0.2125rem;
   white-space: nowrap;
+  color: #5d5d5d;
 }
-
 .input-item{
   background: transparent;
 }
@@ -107,7 +87,6 @@ label{
     color: $value;
   }
   select[class^="input-"].#{$name},textarea.#{$name},input[class^="input"].#{$name}{
-
     @if $name == "danger"{
       color: red;
       border:1px solid $value !important;
@@ -115,7 +94,6 @@ label{
         border: 1px solid $value !important;
       }
     }
-
     @else{
       border: 1px solid $value !important;
       color:$black;
@@ -123,15 +101,12 @@ label{
         border: 1px solid $value !important;
       }
     }
-
-
   }
 
   [class^="input"].disabled{
     background: rgba(128, 128, 128, 0.11);
   }
 }
-
 .input-dropdown{
   height: rem-calc(35px);
 }
@@ -139,9 +114,7 @@ label{
   color: $danger;
 }
 
-
 //media query for form element
-
 @media (max-width: 768px){
 
   .input-item{
@@ -150,199 +123,32 @@ label{
   }
   .inline{
     flex-direction: column;
-
-
   }
   .side-by {
     label{
-        display:flex;
-       border-right: 2px solid rgba(128, 128, 128, 0);
+      display:flex;
+      border-right: 2px solid rgba(128, 128, 128, 0);
     }
-
-
   }
-  form-element{
+  .form-element{
     display: block !important;
-
   }
   button{
     display:block;
   }
 }
 .inline.side-by{
-
   select.input-item{
-    height:rem-calc(31px)!important;
+    height:rem-calc(27px)!important;
   }
 }
 
+input[type=checkbox],input[type=radio]{
+   margin: rem-calc(5px);
+   cursor:pointer;
 
+        &:checked + :focus{
+          outline:none;
+        }
+}
 
-
-
-
-//
-// @mixin transparentBorder{
-// 	border-top:1px solid transparent;
-//border-left:1px solid transparent;
-//border-right:1px solid transparent;
-// }
-//
-// @mixin PlaceHolderStyle{
-// 	  color: #26a69a;
-//  position:relative;
-//  top:-30px;
-//  left:0px;
-//  font-size:14px;
-// }
-//
-// .form{
-// 	height: auto;
-// 	width: auto;
-// 	display:block;
-// 	margin:auto;
-// }
-//
-//input[type=text],.form-element{
-//   position:relative;
-//   width: 100%;
-//   height: 40px;
-//   font-size: 15px!important;
-//   line-height: 1.42857143;
-//   color: #555;
-//   outline:none ;
-//   font-size:16px;
-//   @include transparentBorder;
-//   transition:0.2s;
-//   border-bottom:1px solid #9e9e9e;
-//     transition:all 0.2s;
-//
-//	 	&:focus{
-//	  		 @include transparentBorder;
-//			 border-bottom: 2px solid #26a69a;
-//			 box-shadow: 0 1px 0 0 #26a69a;
-//			 transition:0.2s;
-//
-//	    		 &::-webkit-input-placeholder{
-//				 	@include PlaceHolderStyle;
-//				 }
-//
-//				 &::-moz-placeholder{
-//				  	@include PlaceHolderStyle;
-//				 }
-//
-//				&::-ms-placeholder{
-//				  @include PlaceHolderStyle;
-//				}
-//
-//				&::-o-placeholder{
-//				  @include PlaceHolderStyle;
-//				}
-//     	}
-//
-//
-//
-//
-//}
-//
-//
-//
-//
-//@mixin afterChecked{
-//        content:url('http://crimea-summer.ru/images/check.png');
-//		text-transform: uppercase;
-//		clear:both;
-//		padding-right: 6px;
-//
-//}
-//
-//@mixin afterCheckedRadio{
-//        content:url('http://www.viviendaselombu.com.ar/images/radio-checked.jpg');
-//		text-transform: uppercase;
-//		clear:both;
-//		padding-right: 6px;
-// }
-//
-//
-//
-//label{
-//	font-weight:bold;
-//   color:#4c4c4c;
-//   font-size:16px;
-// }
-//
-//
-//input[type=checkbox]{
-//         height:15px;
-//         width :15px;
-//         vertical-align: middle;
-//
-//            &:checked + label {
-//            	transition:0.9s;
-//			 color: teal;
-//			 font-style: normal;
-//
-//			   &:before{
-//					@include afterChecked;
-//				}
-//		}
-//
-//     }
-//
-//     input[type=checkbox]:checked{
-//     	display:none;
-//     }
-//
-//
-//     input[type=radio]{
-//            height:15px;
-//            width: 15px;
-//            vertical-align: middle;
-//
-//         &:checked + label {
-//	 color: teal;
-//	 font-style: normal;
-//
-//		&:before{
-//
-//			@include afterCheckedRadio;
-//		}
-//	}
-//     }
-//
-//     input[type=radio]:checked{
-//     	display:none;
-//     }
-//
-//
-//
-//	input[type=date]{
-//		    font-weight: bold !important;
-//		    color: teal;
-//		    box-shadow: 0px -1px 6px 0px rgba(214, 214, 214, 0.45);
-//		    border: none;
-//		    height: 39PX;
-//		    transition: 0.2s;
-//		    outline: none;
-//		    text-align: center;
-//
-//		    &:hover{
-//		    	font-size:15px;padding-left:5px;
-//		    	outline:none;
-//		    	transform :translateY(-2px);
-//		    	box-shadow:0px -1px 9px 2px rgba(214, 214, 214, 0.45);
-//		    }
-//	}
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//

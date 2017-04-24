@@ -1,28 +1,28 @@
-
-$box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
-
-button.default, button.info, button.success, button.danger, button.warning, button.dark,button.primary{
+a.button,
+button.default,
+button.info,
+button.success,
+button.danger,
+button.warning,
+button.dark,
+button.primary{
   font-size: 14px;
-  //padding:10px 10px;
   @include display-flex(inline-flex);
   @include justify-content(center);
   @include align-items(center);
   outline:none;
   cursor:pointer;
   margin:3px;
-  font-weight:bold;
-
-  //text-align: center;
   border: none;
   @include border-radius(2px);
-
-  transition: .3s ease-out;
-  @include box-shadow(0px 1px 5px grey);
+  @include transition(.3s ease-out);
+  @include box-shadow($box-shadow);
   &:hover{
-    transform:translateY(-2px);
+
+    @include transform(translateY(-2px));
   }
   &:active{
-    transform:translateY(3px);
+    @include transform(translateY(3px));
   }
 
 }
@@ -30,7 +30,11 @@ button.default, button.info, button.success, button.danger, button.warning, butt
  
 
 @each $name, $value, $color in $colors {          //here is $name and $value is a paramiter for a loop
-	button.#{$name},button.#{$name}{
+  a.button.#{$name},
+  button.#{$name},
+  button.#{$name},
+  button.circle.#{$name}
+    {
 	  	@include display-flex(inline-flex);
 		background: $value;
       @if($name =='default'){
@@ -40,42 +44,60 @@ button.default, button.info, button.success, button.danger, button.warning, butt
       }
 		  &:hover{
 		    background: $value - 25;
-		    box-shadow:$box-shadow;
+            @include box-shadow($box-shadow);
 		  }
-   	  
 	}
-    	.#{$name}.l{
-    	  padding:15px 50px;
-    	  font-size:16px;
-    	}
-        .#{$name}.m{
-          padding:8px 8px;
-          font-size:14px;
-        }
-    	.#{$name}.s{
-    	  padding:3px 5px;
-    	  margin:3px;
-    	  border-radius:3px;
-    	  font-size:12px;
-    	  font-weight: normal;
-    	}
-    	
-    	.#{$name}.block{
-    	  display:flex;
-    	  align-items:center;
-    	  justify-content:center;
-    	  text-align:center;
-    	  padding:8px 10px;
-    	  margin:3px;
-    	  font-size:17px;
-    	  width:100%;
-    	}
-    	
-    	.#{$name}.disabled{
-       opacity:0.4;
-       cursor:no-drop;
-       color:$gray;
-    }
-	
+}
+a.button.l,
+button.l{
+  padding:15px 50px;
+  font-size:16px;
+}
+a.button.m,
+button.m{
+  padding:8px 8px;
+  font-size:14px;
+}
+a.button.s,
+button.s{
+  padding:3px 5px;
+  margin:3px;
+  border-radius:3px;
+  font-size:12px;
+  font-weight: normal;
+}
+a.button.block,
+button.block{
+  @include display-flex();
+  @include align-items(center);
+  @include justify-content(center);
+  text-align:center;
+  padding:8px 0;
+  width:100%;
 }
 
+a.button.disabled,
+button.disabled{
+  opacity:0.4;
+  cursor:no-drop;
+  color:$gray;
+}
+
+
+a.button.close,
+button.close{
+  border: none;
+  &:after{
+    content: '\2613';
+  }
+}
+a.button.rounded,
+button.rounded{
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  @include border-radius(24px);
+}
+a.button.no-radius,
+button.no-radius{
+  @include border-radius(0);
+}

@@ -1,22 +1,13 @@
-button.accordion {
-    background:$lightgrey;
-    color:$black;
+.accordion{
+  button.target {
     cursor: pointer;
     padding: 18px 0;
     width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
     font-size: 15px;
-    border-bottom:1px solid rgba(211, 211, 211, 0.12);
-    
-              span{
-                padding-left: 5px;
-              }
-       &:focus{
-           background:$lightgrey - 20;
-           @include transition(0.7s);
-       }
+    span{
+      padding-left: 5px;
+    }
+  }
 }
 
 div.panel {
@@ -24,28 +15,10 @@ div.panel {
     display: none;
 }
 
-div.panel.show {
+div.panel.active {
     display: block; border: 1px solid #e2e2e2;
 }
 
 div.panel.hide {
     display: none;
 }
-
-@each $name,$value in $colors{
-    .accordion.#{$name}{
-        background: $value;
-        @if $name == 'default' {
-            color:$dark;
-        }   
-        @else {
-            color:$white;
-        }
-        &:focus{
-            background-color:$value - 20;
-             @include transition(all 1s ease-in);
-            
-        }
-    }
-
- }

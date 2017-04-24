@@ -13,9 +13,21 @@ div.box-layout{
 	}
 }
 
+ol{
+	padding: 10px;
+}
+
+ol li{
+	padding: 0;
+	margin: 0;
+}
 
 	ul li{
 		list-style:none;
+	}
+
+	ul.with-bold li{
+		list-style-type: disc;
 	}
 
 	.list-group{

@@ -1,4 +1,4 @@
-@mixin container($padding:0, $margin:0){
+@mixin container($padding:50px, $margin:0){
   @include display-flex;
   @include flex-direction(column);
   padding: $padding;

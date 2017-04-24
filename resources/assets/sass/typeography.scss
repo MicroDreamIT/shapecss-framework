@@ -1,14 +1,14 @@
-.center{
+.text-center{
   text-align: center;
-  //margin: auto;
 }
-.small{
-  font-size: smaller;
+.center{
+  margin:0 auto;
 }
+
+.small{  font-size: smaller;}
 .justify{
   text-align: justify;
 }
-
 p.right{
   float: right;
 }
@@ -26,34 +26,80 @@ p.right{
   }
 }
 
-h1, .h1{
-  font-size: rem-calc(70px);
-  margin: ($h1-fs/2) 0;
+// new code for typography
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5;
+  font-weight: 400;
+  margin: rem-calc(10px) 0;
+}
+h1 {
+  font-size: rem-calc(36px);
+}
+h2{
+  font-size: rem-calc(30px);
+}
+h3{
+  font-size: rem-calc(24px);
+}
+h4{
+  font-size: rem-calc(20px);
+}
+h5{
+  font-size: rem-calc(18px);
+}
+h6{
+  font-size: rem-calc(16px);
+}
+hr{
+  margin:1.3rem 0 !important;
 }
 
-h2, .h2{
-  font-size: $h2-fs;
-  margin: ($h2-fs/2) 0;
+
+
+.underline{
+  text-decoration: underline;
+}
+.dot-underline{
+  text-decoration: underline dotted;
+}
+.double-underline{
+  text-decoration: underline double;
+}
+.dash-underline{
+  text-decoration: underline dashed;
+}
+.wavy-underline{
+  text-decoration: underline wavy;
 }
 
-h3, .h3{
-  font-size: $h3-fs;
-  margin: ($h3-fs/2) 0;
+.line-over{
+  text-decoration:overline;
 }
 
-h4, .h4{
-  font-size: $h4-fs;
-  margin: ($h4-fs/2) 0;
+.line-through{
+  text-decoration:line-through;
 }
 
-h5, .h5{
-  font-size: $h5-fs;
-  margin: ($h5-fs/2) 0;
+.italic{
+  font-style: italic;
 }
 
-h6, .h6{
-  font-size: $h6-fs;
-  margin: ($h6-fs/2) 0;
+.oblique{
+  font-style:oblique;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
 
+.capital {
+  text-transform: capitalize;
+}
+small{
+  font-size:smaller;
+}
+@import "blockquote";

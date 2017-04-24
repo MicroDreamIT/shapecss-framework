@@ -3,34 +3,39 @@
   @include flex-wrap(wrap);
   margin-bottom: rem-calc(5px);
 }
-
-
 .container-full{
   @include container();
 }
-
 .container-flex{
   @include container();
   padding: rem-calc(20px);
 }
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: rem-calc(15px);
-  padding-right: rem-calc(15px);
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
+
+// Landscape phones and down
+@media (max-width: 480px) {
+  .container{
+    width: 90%;
   }
 }
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
+
+// Landscape phone to portrait tablet
+@media (max-width: 767px) {
+  .container{
+    width: 90%;
   }
 }
+
+// Portrait tablet to landscape and desktop
+@media (min-width: 768px) and (max-width: 979px) {
+  .container{
+      width: 90%;
+  }
+}
+
+// Large desktop
 @media (min-width: 1200px) {
-  .container {
+  .container{
     width: 1170px;
   }
 }
+

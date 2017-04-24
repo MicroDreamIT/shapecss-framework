@@ -1,0 +1,39 @@
+blockquote{
+  font-size: 18px;
+  font-style: italic;
+  width: 500px;
+  margin: 0.25em 0;
+  padding: 0.25em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #383838;
+
+  &::before{
+    display: block;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -2px;
+    top: -33px;
+    color: #7a7a7a;
+  }
+
+  cite{
+    color: #999999;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+    &::before{
+      content: "\2014 \2009";
+    }
+  }
+
+  &.with-border{
+    border-left: 5px solid lightgrey;
+    padding: rem-calc(17px) rem-calc(33px);
+    &::before{
+      top: -19px;
+    }
+  }
+
+}

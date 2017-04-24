@@ -1,41 +1,41 @@
-box{
-	//display: flex;
-	@include display-flex();
-	@include flex-direction(column);
-	//flex-direction: column;
-
-	box-shadow: $shadow;
-	transition:all 0.5s;
-	&:hover{
-		transform: translateY(-5px);
-	}
-
-	box-title{
-		@include display-flex();
-		background:rgba(142, 142, 142, 0.27);
-		padding: rem-calc(13px);
-		font-weight:500;
-		box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.25);
-	}
-
-	@each $name, $value in $colors {
-		box-footer.#{$name},box-title.#{$name}{
-			background: $value;
-			color: $white;
-		}
-
-
-	}
-
-	box-body{
-		padding: rem-calc(13px);
-	}
-
-	box-footer{
-		//min-height: rem-calc(46px);
-		@extend box-title;
-		box-shadow: none;
-	}
-
-}
+//box{
+//	//display: flex;
+//	@include display-flex();
+//	@include flex-direction(column);
+//	//flex-direction: column;
+//
+//	box-shadow: $shadow;
+//	transition:all 0.5s;
+//	&:hover{
+//		transform: translateY(-5px);
+//	}
+//
+//	box-title{
+//		@include display-flex();
+//		background:rgba(142, 142, 142, 0.27);
+//		padding: rem-calc(13px);
+//		font-weight:500;
+//		box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.25);
+//	}
+//
+//	@each $name, $value in $colors {
+//		box-footer.#{$name},box-title.#{$name}{
+//			background: $value;
+//			color: $white;
+//		}
+//
+//
+//	}
+//
+//	box-body{
+//		padding: rem-calc(13px);
+//	}
+//
+//	box-footer{
+//		//min-height: rem-calc(46px);
+//		@extend box-title;
+//		box-shadow: none;
+//	}
+//
+//}
 

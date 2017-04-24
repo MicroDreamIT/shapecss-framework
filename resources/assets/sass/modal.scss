@@ -1,110 +1,160 @@
-
-		
-
+$modal-header-footer-padding : 9px;
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; 
-    background: rgba(14, 14, 14, 0.82);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background: rgba(14, 14, 14, 0.82);
+}
+.modal.active{
+  display: block;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 0;
+  //border: 1px solid #888;
+  width: 80%;
+  position: relative;
+  @include border-radius(2px);
+  @include box-shadow($box-shadow);
+  -webkit-animation-name: fadein;
+  -webkit-animation-duration: 0.6s;
+  animation-name: fadein;
+  animation-duration: .6s;
+
+  .modal-body {
+    padding: 10px;
+    border-bottom: 1px solid #fff5f5;
+    color: #525252;
+  }
+
+  .modal-header {
+    padding: $modal-header-footer-padding;
+    background: $lightgrey;
+    color: $dark;
+    border-bottom: 2px solid #d6d6d6;
+    button.close {
+      cursor: pointer !important;
+      float: right;
+      height: rem-calc(12px);
+      width: rem-calc(12px);
+      margin-top: rem-calc(5.7px);
+      margin-right:rem-calc(-1px);
+      &:after {
+        position: absolute;
+        right: 9px;
+        top: 9px;
+        font-size: 14px;
+        color: rgba(210, 210, 210, 0.5);
+      }
+    }
+  }
+  .modal-footer {
+    min-height: 38px;
+    padding: $modal-header-footer-padding;
+    button {
+        .right{
+          float: right;
+          margin-right:3px;
+        }
+
+    }
+  }
 
 }
 
+@mixin linkStyle {
+  padding: 12px 8px;
+  font-size: 15px;
+  min-width: 150px;
+  margin-right: 10px;
+  outline: none;
+  text-decoration: none;
+  border: 1px solid rgba(238, 238, 238, 0.74);
+  transition: all 0.5s;
+}
 
+@mixin floatLeft {
+  float: left;
+  margin-left: 10px;
+}
 
+@mixin floatRight {
+  float: right;
+  margin-right: 10px;
+}
 
+.link-right {
 
- 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding:0px;
-    border: 1px solid #888;
-    width: 80%;
-    position :relative;
-    box-shadow: -1px 3px 27px rgba(0, 0, 0, 0.86);
+  @include floatRight;
+  //@include linkStyle;
 
-        .modal-body{
-            padding: 10px;
-            font-family:initial;
-            text-align: justify;
-            border-bottom: 1px solid #fff5f5;
-            color: #525252;
-        }
+}
 
-             .modal-header{
-                height: 50px;
-                background:$lightgrey !important;
-                color:$dark;
-                text-align: center;
-                font-size:24px;
-                line-height:50px;
-                border-bottom: 2px solid #d6d6d6;
+.link-left {
+  @include floatLeft;
+  @include linkStyle;
+}
 
-                .close{
-                    position: absolute; 
-                    top: -3px; right:
-                     13px; color: #c3c3c3;
-                        float: right;
-                        font-size: 28px;
-                        font-weight: bold;
-                        cursor:pointer;
-                 }
-            }
-
-            .modal-footer{
-                    min-height:38px;
-                    padding:10px;    
-                }
-
-
-        }
-
-
-
-    @mixin linkStyle{
-        color:#000; 
-        border:none;     
-        padding:12px 8px;
-        font-size:15px;       
-        min-width:150px;
-        margin-right:10px;
-        outline:none;
-        text-decoration:none;
-        border:1px solid rgba(238, 238, 238, 0.74);
-        transition:all 0.5s;
+@each $name, $value in $modal-width{
+  .modal.#{$name}{
+    .modal-content{
+      width: $value;
+      @if($name == 'full-screen'){
+        height:100vh;
+        margin: 0;
+      }
     }
+  }
+}
 
-    @mixin floatLeft{
-        float:left;
-        margin-left:10px;
-    }
-    
-    @mixin floatRight{
-        float:right;
-         margin-right:10px;
-    }
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 
 
-    .link-right{
+//modal media query
 
-         @include floatRight;
-         @include linkStyle;
-             &:hover{
-                    background: #002C3A;
-                    color: $default;
-             }
-        }
+@media all and (max-width: 768px) {
+  .modal.small .modal-content {
+    width: 55%;
+  }
+  .modal.medium .modal-content{
+    width: 60%;
+  }
+  .modal.large .modal-content {
+    width: 70%;
+  }
+}
 
-    .link-left{
-
-         @include floatLeft;
-         @include linkStyle;
-    }
-
- 
