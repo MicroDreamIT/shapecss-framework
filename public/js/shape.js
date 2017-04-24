@@ -200,7 +200,6 @@ var Modal = function Modal() {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = getTab;
-/* unused harmony export tab */
 function applyTabChange(getDivTarget, getLoadOnTargetId) {
     var getTabDiv = document.getElementById(getDivTarget);
     if (getTabDiv && getTabDiv.classList.contains('tab-content')) {
@@ -249,8 +248,6 @@ function getTab() {
         _loop(i);
     }
 }
-
-
 
 /***/ })
 /******/ ]);
