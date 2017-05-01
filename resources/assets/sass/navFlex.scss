@@ -3,7 +3,6 @@ nav{
   @include align-items(center);
   @include justify-content(space-between);
   @include flex-wrap(wrap);
-  padding:10px;
   .item{
         li{
           float:left;

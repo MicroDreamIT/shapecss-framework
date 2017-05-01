@@ -68,7 +68,7 @@ button.s{
 }
 a.button.block,
 button.block{
-  @include display-flex();
+  display: block !important;
   @include align-items(center);
   @include justify-content(center);
   text-align:center;

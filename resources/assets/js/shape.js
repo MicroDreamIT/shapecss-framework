@@ -1,4 +1,3 @@
-
 'use strict';
 
 import {Accordion} from "./component/Accordion";

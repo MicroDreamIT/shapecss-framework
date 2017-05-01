@@ -45,7 +45,8 @@
   }
 }
 @media all and(max-width:768px){
-   .container{
+  .container-full,
+  .container{
     @include flex-direction(column);
     .row{
       @include flex-direction(column);

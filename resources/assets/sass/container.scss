@@ -2,9 +2,10 @@
   @include display-flex;
   @include flex-wrap(wrap);
   margin-bottom: rem-calc(5px);
+  @include flex(1);
 }
 .container-full{
-  @include container();
+  @include display-flex();
 }
 .container-flex{
   @include container();

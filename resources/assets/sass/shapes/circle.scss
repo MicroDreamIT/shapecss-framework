@@ -28,15 +28,15 @@ circle{
 	width:$value*2;
 	-moz-border-radius: 100%;
 	-webkit-border-radius: 100%;
-	 border-radius:  100%;
-	 display: inline-block;
-	 background:$background;
-	 text-align:center;
-	 line-height:147px;
-	 font-size:40px;
+	border-radius:  100%;
+	display: inline-block;
+	background:$background;
+	text-align:center;
+	line-height:147px;
+	font-size:40px;
 }
 oval{
-    @include oval(150,teal);
+	@include oval(150,teal);
 }
 
 $circle-button-redius : 70px;
@@ -50,4 +50,5 @@ button.circle{
 	text-align: center;
 	@include border-radius($circle-button-redius/2);
 	font-size: 11px;
+	display: inline-block !important;
 }
