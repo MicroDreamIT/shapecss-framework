@@ -1,4 +1,3 @@
-
 .toggle{
   position: relative;
   display: inline-block;
@@ -8,38 +7,49 @@
       display:none;
       &:checked + .switch{
           &::before{
-            left: 38px;
+            left: rem-calc(37px);
             background: #e4e4e4 + 20;
           }
       }
+
     }
       .switch{
-        border-radius: 37px;
+        border-radius:rem-calc( 37px);
         position: absolute;
         cursor: pointer;
-        top: -3px;
-        left: 1px;
+        top: rem-calc(-3px);
+        left:rem-calc(1px);
         right: 0;
-        bottom: 6px;
-        -webkit-transition: .4s;
+        bottom: rem-calc(6px);
+        //-webkit-transition: .4s;
+        @include transition(.4s);
         transition: .4s;
           &:before{
             border-radius: 50%;
             position: absolute;
             content:'';
-            height: 29px;
-            width: 29px;
-            left: -1px;
-            bottom: -3px;
-            -webkit-transition: .4s;
+            height: rem-calc(29px);
+            width: rem-calc(29px);
+            left: rem-calc(-1px);
+            bottom: rem-calc(-3px);
+            @include transition(.4s);
             transition: .4s;
-            box-shadow: 0px 0px 1px #8e8e8e;
+            box-shadow:0 0 1px #353333;
             background: #e4e4e4;
-            border: 1.5px solid rgba(105, 105, 105, 0.18);
+            border: rem-calc(1.5px) solid rgba(105, 105, 105, 0.18);
           }
       }
+      .switch.square{
+        @extend .switch;
+        border-radius:rem-calc(2px);
+        &:before{
+          border-radius:rem-calc(0px);
+          height: rem-calc(27px);
+          width: rem-calc(26px);
+          border: rem-calc(1px) solid rgba(105, 105, 105, 0.18);
+        }
+      }
 }
-
 @each $name,$value in $colors{
   input[type=checkbox]{
     &:checked + .switch.bg-#{$name}{
@@ -48,66 +58,4 @@
       }
     }
   }
-
 }
-
-//input[type=checkbox].toggle{
-//  outline: none;
-//  cursor: pointer;
-//  width: 0;
-//  height: 27px;
-//  margin-left: 9px;
-//  margin-top: -2px;
-//
-//  &:after{
-//    content: '';
-//    margin-top: 3px;
-//    width: 60px;
-//    height: 21px;
-//    display: block;
-//    @include background(rgba(248, 248, 248, 0.31));
-//
-//    @include border-radius(21px);
-//    @include box-shadow($shadow);
-//    //box-shadow: $shadow;
-//    border: 1px solid rgba(0, 0, 0, 0.23);
-//  }
-//
-//  &:before{
-//    @include transition(all .2s ease-in-out);
-//    position: absolute;
-//    content: '';
-//    background: #e4e4e4 + 20;
-//    height: 28px;
-//    width: 28px;
-//    @include border-radius(14px);
-//    //@include border(1.5px solid rgba(105, 105, 105, 0.18));
-//    border: 1.5px solid rgba(105, 105, 105, 0.18);
-//    margin-left: -5px;
-//
-//  }
-//
-//  &:checked {
-//
-//    &:after{
-//    }
-//    &:before{
-//      @include box-shadow($shadow);
-//      //box-shadow: $shadow;
-//      @include transition(all .2s ease-in-out);
-//      background: #e4e4e4 + 20;
-//      margin-left: 36px;
-//    }
-//  }
-//}
-//
-//input[type=checkbox].toggle.square{
-//  &:after{
-//    @include border-radius(4px);
-//    border-radius: 4px;
-//  }
-//  &:before{
-//    @include border-radius(4px);
-//    //border-radius: 4px;
-//  }
-//}
