@@ -27,3 +27,7 @@
 ## Quick start
 
 - [Download the latest release.](https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/css/shape.min.css, https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/js/shape.min.js)
+- Clone the repo: `git clone https://github.com/MicroDreamIT/shapecss-framework.git`
+- install with [npm](https://www.npmjs.com): `npm install shapecss`
+
+
