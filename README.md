@@ -33,3 +33,30 @@
 ## Status
 
 [![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/shapecss)
+
+## What's included
+
+You find minified and compiled files in public directory.
+
+```
+shapecss-framework/
+    public/
+      ├── css/
+      │   ├── shape.css
+      │   ├── shape.min.css
+      └── js/
+          ├── shape.js
+          └── shape.min.js
+```
+If you download total repository, then import
+
+```
+shapecss-framework/
+    resources/
+    assets/
+      ├── sass/
+      │   ├── main.scss
+      └── js/
+          ├── shape.js
+```
+
