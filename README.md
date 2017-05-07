@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://shapecss.com">
-<img src="https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/logo/logo.svg" width=72 height=72>
+<img src="https://www.shapecss.com/images/svg/logo.svg" width=72 height=72>
 </a>
 </p>
 
