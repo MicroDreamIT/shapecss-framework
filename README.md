@@ -83,3 +83,8 @@ Get updates on Shapecss's development and chat with the project maintainers and 
 **Emu**
 
 - <https://www.facebook.com/unhappy.emu.9>
+
+
+## Copyright and license
+
+Code copyright 2017 Shahanur Sharif. Code released under [the MIT license](https://github.com/MicroDreamIT/shapecss-framework/blob/master/LICENSE).
