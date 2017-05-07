@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -75,8 +75,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component_Accordion__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component_Modal__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__component_Tab__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_shapes_Circle__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_Nav__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_Nav__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_shapes_Circle__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_shapes_Parallelogram__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__component_shapes_Rectangle__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__component_shapes_Square__ = __webpack_require__(9);
+
+
+
+
 
 
 
@@ -89,8 +96,11 @@ window.onload = function () {
   new __WEBPACK_IMPORTED_MODULE_0__component_Accordion__["a" /* Accordion */]();
   new __WEBPACK_IMPORTED_MODULE_1__component_Modal__["a" /* Modal */]();
   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__component_Tab__["a" /* getTab */])();
-  new __WEBPACK_IMPORTED_MODULE_3__component_shapes_Circle__["a" /* Circle */]();
-  new __WEBPACK_IMPORTED_MODULE_4__component_Nav__["a" /* Nav */]();
+  new __WEBPACK_IMPORTED_MODULE_3__component_Nav__["a" /* Nav */]();
+  new __WEBPACK_IMPORTED_MODULE_4__component_shapes_Circle__["a" /* Circle */]();
+  new __WEBPACK_IMPORTED_MODULE_5__component_shapes_Parallelogram__["a" /* Parallelogram */]();
+  new __WEBPACK_IMPORTED_MODULE_6__component_shapes_Rectangle__["a" /* Rectangle */]();
+  new __WEBPACK_IMPORTED_MODULE_7__component_shapes_Square__["a" /* Square */]();
 };
 
 /***/ }),
@@ -379,6 +389,301 @@ var Circle = function () {
 
 /***/ }),
 /* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Parallelogram; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Parallelogram = function () {
+	function Parallelogram() {
+		_classCallCheck(this, Parallelogram);
+
+		var i = void 0;
+		var parallelograms = document.getElementsByTagName('parallelogram');
+
+		for (i = 0; i < parallelograms.length; i++) {
+			this.processSquare(parallelograms[i]);
+		}
+
+		var parallelogramClasses = document.getElementsByClassName('parallelogram');
+
+		for (i = 0; i < parallelogramClasses.length; i++) {
+			this.processSquare(parallelogramClasses[i]);
+		}
+	}
+
+	_createClass(Parallelogram, [{
+		key: 'processSquare',
+		value: function processSquare(parallelogram) {
+
+			if (parallelogram.hasAttribute('shape-height')) {
+				getShapeHeight();
+			}
+
+			if (parallelogram.hasAttribute('shape-width')) {
+				getShapeWidth();
+			}
+
+			if (parallelogram.hasAttribute('shape-border')) {
+				getBorder();
+			}
+
+			if (parallelogram.hasAttribute('shape-background')) {
+				getBackground();
+			}
+
+			function getShapeHeight() {
+
+				var height = parallelogram.getAttribute('shape-height');
+
+				var x = height.replace(/[^0-9]/g, '');
+				var unit = height.replace(/[0-9]/g, '');
+
+				if (unit == '%') {
+					unit = 'em';
+				}
+
+				parallelogram.style.height = x + unit;
+				parallelogram.style.lineHeight = height;
+			}
+
+			function getShapeWidth() {
+				var width = parallelogram.getAttribute('shape-width');
+
+				//unit process
+
+				var x = width.replace(/[^0-9]/g, '');
+				var unit = width.replace(/[0-9]/g, '');
+
+				if (unit == '%') {
+					unit = 'em';
+				}
+
+				//rectangle process
+				parallelogram.style.width = x + unit;
+			}
+
+			function getBackground() {
+				var background = parallelogram.getAttribute('shape-background');
+				parallelogram.style.backgroundColor = background;
+			}
+
+			function getBorder() {
+				var border = parallelogram.getAttribute('shape-border');
+
+				if (border.indexOf(',') > -1) {
+					var match = border.split(/\s*,\s*/);
+
+					parallelogram.style.border = match[0] + 'px solid ' + match[1];
+				} else {
+					if (border.match(/^[0-9]+$/) != null) {
+						parallelogram.style.border = border + 'px solid gray';
+					}
+					parallelogram.style.border = border + ' solid gray';
+				}
+			}
+		}
+	}]);
+
+	return Parallelogram;
+}();
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Rectangle; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Rectangle = function () {
+	function Rectangle() {
+		_classCallCheck(this, Rectangle);
+
+		var i = void 0;
+		var rectangles = document.getElementsByTagName('rectangle');
+
+		for (i = 0; i < rectangles.length; i++) {
+			this.processRectangle(rectangles[i]);
+		}
+
+		var rectangleClasses = document.getElementsByClassName('rectangle');
+
+		for (i = 0; i < rectangleClasses.length; i++) {
+			this.processRectangle(rectangleClasses[i]);
+		}
+	}
+
+	_createClass(Rectangle, [{
+		key: 'processRectangle',
+		value: function processRectangle(rectangle) {
+
+			if (rectangle.hasAttribute('shape-width')) {
+				getShapeWidth();
+			}
+
+			if (rectangle.hasAttribute('shape-height')) {
+				getShapeHeight();
+			}
+
+			if (rectangle.hasAttribute('shape-border')) {
+				getBorder();
+			}
+
+			if (rectangle.hasAttribute('shape-background')) {
+				getBackground();
+			}
+
+			function getShapeHeight() {
+
+				var height = rectangle.getAttribute('shape-height');
+
+				var x = height.replace(/[^0-9]/g, '');
+				var unit = height.replace(/[0-9]/g, '');
+
+				if (unit == '%') {
+					unit = 'em';
+				}
+
+				rectangle.style.height = x + unit;
+				rectangle.style.lineHeight = height;
+			}
+
+			function getShapeWidth() {
+				var width = rectangle.getAttribute('shape-width');
+
+				//unit process
+
+				var x = width.replace(/[^0-9]/g, '');
+				var unit = width.replace(/[0-9]/g, '');
+
+				if (unit == '%') {
+					unit = 'em';
+				}
+
+				//rectangle process
+				rectangle.style.width = x + unit;
+			}
+
+			function getBackground() {
+				var background = rectangle.getAttribute('shape-background');
+				rectangle.style.backgroundColor = background;
+			}
+
+			function getBorder() {
+				var border = rectangle.getAttribute('shape-border');
+
+				if (border.indexOf(',') > -1) {
+					var match = border.split(/\s*,\s*/);
+
+					rectangle.style.border = match[0] + 'px solid ' + match[1];
+				} else {
+					if (border.match(/^[0-9]+$/) != null) {
+						rectangle.style.border = border + 'px solid gray';
+					}
+					rectangle.style.border = border + ' solid gray';
+				}
+			}
+		}
+	}]);
+
+	return Rectangle;
+}();
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Square; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Square = function () {
+	function Square() {
+		_classCallCheck(this, Square);
+
+		var i = void 0;
+		var squares = document.getElementsByTagName('square');
+
+		for (i = 0; i < squares.length; i++) {
+			this.processSquare(squares[i]);
+		}
+
+		var squareClasses = document.getElementsByClassName('square');
+
+		for (i = 0; i < squareClasses.length; i++) {
+			this.processSquare(squareClasses[i]);
+		}
+	}
+
+	_createClass(Square, [{
+		key: 'processSquare',
+		value: function processSquare(square) {
+
+			if (square.hasAttribute('shape-width')) {
+				getShapeWidth();
+			}
+
+			if (square.hasAttribute('shape-border')) {
+				getBorder();
+			}
+
+			if (square.hasAttribute('shape-background')) {
+				getBackground();
+			}
+
+			function getShapeWidth() {
+				var width = square.getAttribute('shape-width');
+
+				//unit process
+				var value = width.replace(/[^0-9]/g, '');
+				var unit = width.replace(/[0-9]/g, '');
+
+				if (unit == '%') {
+					unit = 'em';
+				}
+
+				//square process
+				square.style.width = width;
+				square.style.height = value + unit;
+				square.style.lineHeight = width;
+			}
+
+			function getBackground() {
+				var background = square.getAttribute('shape-background');
+				square.style.backgroundColor = background;
+			}
+
+			function getBorder() {
+				var border = square.getAttribute('shape-border');
+
+				if (border.indexOf(',') > -1) {
+					var match = border.split(/\s*,\s*/);
+
+					square.style.border = match[0] + 'px solid ' + match[1];
+				} else {
+
+					if (border.match(/^[0-9]+$/) != null) {
+						square.style.border = border + 'px solid gray';
+					}
+					square.style.border = border + ' solid gray';
+				}
+			}
+		}
+	}]);
+
+	return Square;
+}();
+
+/***/ }),
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
