@@ -1,5 +1,21 @@
 {
-  "private": true,
+  "name": "shapecss",
+  "version":"2.0.1",
+  "description":"shapeCss is the modern, stylish and flexbox css framework",
+  "main":"assets/js/shape.js",
+  "style":"assets/sass/main.scss",
+  "repository":{
+  "type":"git",
+  "url":"git+https://github.com/MicroDreamIT/shapecss-framework"
+},
+"keywords":[
+  "css framework",
+  "shape generator",
+  "light css framework"
+],
+"author":"MicroDreamIT <info@microdreamit.com> (https://microdreamit.com)",
+"license":"MIT",
+"private": true,
   "scripts": {
 "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
 "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
