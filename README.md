@@ -24,8 +24,6 @@
 - [Community](#community)
 
 
-### NPM
+## Quick start
 
-```sh
-npm install shapecss
-```
+- [Download the latest release.](https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/css/shape.min.css, https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/js/shape.min.js)
