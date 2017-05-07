@@ -73,7 +73,7 @@ Get updates on Shapecss's development and chat with the project maintainers and 
 - Chat with the team and developers on [gitter.im](https://gitter.im/shapecss/shapecss)
 - Read and subscribe to [The Official Shapecss Blog](https://blog.shapecss.com).
 
-## Creator
+## Creators
 
 **Shahanur Sharif**
 
