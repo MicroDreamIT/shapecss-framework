@@ -30,4 +30,6 @@
 - Clone the repo: `git clone https://github.com/MicroDreamIT/shapecss-framework.git`
 - install with [npm](https://www.npmjs.com): `npm install shapecss`
 
+## Status
 
+[![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/bootstrap)
