@@ -18,11 +18,11 @@
 - [Quick start](#quick-start)
 - [Status](#status)
 - [What's included](#whats-included)
-- [Bugs and feature requests](#bugs-and-feature-requests)
 - [Documentation](#documentation)
-- [Contributing](#contributing)
 - [Community](#community)
-
+- [Versioning](#versioning)
+- [Creators](#creators)
+- [Copyright and license](#copyright-and-license)
 
 ## Quick start
 
@@ -62,3 +62,13 @@ shapecss-framework/
           └── shape.js
 ```
 
+## Documentation
+
+Shapecss's documentation, included in this repo in the root directory, is built with [Laravel](https://laravel.com). The docs may also be run locally. <https://shapecss.com>
+
+## Community
+
+Get updates on Shapecss's development and chat with the project maintainers and community members.
+
+- Follow [@microdreamit on Twitter](https://twitter.com/MicroDreamIT).
+- Read and subscribe to [The Official Shapecss Blog](https://blog.shapecss.com).
