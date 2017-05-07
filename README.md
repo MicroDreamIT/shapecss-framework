@@ -20,7 +20,6 @@
 - [What's included](#whats-included)
 - [Documentation](#documentation)
 - [Community](#community)
-- [Versioning](#versioning)
 - [Creators](#creators)
 - [Copyright and license](#copyright-and-license)
 
@@ -73,3 +72,14 @@ Get updates on Shapecss's development and chat with the project maintainers and 
 - Follow [@microdreamit on Twitter](https://twitter.com/MicroDreamIT).
 - Chat with the team and developers on [gitter.im](https://gitter.im/shapecss/shapecss)
 - Read and subscribe to [The Official Shapecss Blog](https://blog.shapecss.com).
+
+## Creator
+
+**Shahanur Sharif**
+
+- <https://twitter.com/shahanursharif>
+- <https://www.facebook.com/babu.sharif.12>
+
+**Emu**
+
+- <https://www.facebook.com/unhappy.emu.9>
