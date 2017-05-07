@@ -6,7 +6,7 @@
 <h3 align="center">Shapecss</h3>
 
   <p align="center">
-    Shapecss is lightweight but heavy components css framework.
+    Shapecss, modern stylish css framework
     <br>
     <a href="https://shapecss.com"><strong>Visit Shapecss &raquo;</strong></a>
   </p>
