@@ -12,7 +12,9 @@
   </p>
 
 </p>
+
 ## Table of contents
+
 - [Quick start](#quick-start)
 - [Status](#status)
 - [What's included](#whats-included)
