@@ -29,10 +29,12 @@
 - [Download the latest release.](https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/css/shape.min.css, https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/js/shape.min.js)
 - Clone the repo: `git clone https://github.com/MicroDreamIT/shapecss-framework.git`
 - install with [npm](https://www.npmjs.com): `npm install shapecss`
-
+- Entry javascript, `resources/assets/js/shape.js`
+- Entry scss, `resources/assets/sass/main.scss`
 ## Status
 
 [![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/shapecss)
+
 
 ## What's included
 
@@ -57,6 +59,6 @@ shapecss-framework/
       ├── sass/
       │   ├── main.scss
       └── js/
-          ├── shape.js
+          └── shape.js
 ```
 
