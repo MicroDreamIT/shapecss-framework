@@ -1,108 +1,116 @@
-nav{
+nav {
   @include display-flex();
   @include align-items(center);
-  @include justify-content(space-between);
   @include flex-wrap(wrap);
-  .item{
-        li{
-          float:left;
-          padding: rem-calc(6px) rem-calc(3px);
-          position: relative;
-      a{
-        padding:rem-calc(14px) rem-calc(10px);
+  .logo {
+    max-height: rem-calc(90px);
+    max-width: rem-calc(220px);
+    overflow: hidden;
+    background: transparent;
+    padding-right: rem-calc(20px);
+  }
+  .item {
+    margin-top: 0;
+
+    li {
+      float: left;
+      padding: rem-calc(6px) rem-calc(3px);
+      position: relative;
+      line-height:rem-calc(47px);
+
+      a {
+        padding: rem-calc(19px) rem-calc(11px);
         text-align: center;
-        font-size:rem-calc(16px);
-        button{
+        font-size: rem-calc(16px);
+
+        &:hover ~ .sub {
+          display: block;
+          z-index: 3;
+        }
+        button {
           margin-top: 0 !important;
         }
-        &:hover ~ .sub{
-          display:block;
-          z-index:3;
-        }
+
       }
-      .sub{
+      .sub {
+        //@include box-shadow(2px 2px 1px 0px rgba(0, 0, 0, 0.46));
         min-width: rem-calc(145px);
-        height:auto;
+        height: auto;
         position: absolute;
-        top:rem-calc(35px);
-        left: 0;
-        display:none;
-        &:hover{display:block;}
-        li{
-          float:none;
-          padding:0;
-          margin:0;
-          a{
-            background:grey;
-            display:block;
-            padding: rem-calc(5px);
-            -webkit-transition:all .5s ease-out;
-            border-bottom:1px solid transparent;
-            text-align:center;
-            &:hover{
-              background:lightgrey;
-              color:#000;
-              border-bottom:rem-calc(1px) solid #fff;
-            }
-          }
+        top:rem-calc(58px);
+        left: rem-calc(10px);
+        display: none;
+        z-index: 200;
+        &:hover {
+          display: block;
+        }
+        li {
+          float: none;
+          padding: 0;
+          margin: 0;
+          line-height: rem-calc(4px);
+          min-width:rem-calc(180px);
+                   a {
+                        padding: rem-calc(14px) rem-calc(11px);
+                        background: grey;
+                        display: block;
+                        -webkit-transition: all .5s ease-out;
+                        @include transition(all .5s ease-out);
+                        border-bottom: rem-calc(1px) solid transparent;
+                        text-align: left;
+                     font-size:rem-calc(14px);
+                            &:hover {
+                              background: lightgrey;
+                              color: #000;
+                              //border-bottom: rem-calc(1px) solid #fff;
+                            }
+                }
+        }
+        .sub{
+          position: absolute;
+          top: 0;
+          left: 100%;
         }
       }
     }
-    .logo{
-      max-height:rem-calc(90px);
-      max-width:rem-calc(220px);
-      overflow:hidden;
-      background:transparent;
-    }
+
   }
 }
-@media screen and (max-width:768px) {
-  nav{
+
+@media screen and (max-width: 768px) {
+  nav {
     @include flex-direction(column !important);
-    display: none;
+    //display: none;
     @include transition(all 0.5s ease-in);
-    .right{
-      margin-left:0 !important;
-      display:inline;
+    .item {
+      display: none;
+      align-items: center;
+      margin-bottom: rem-calc(10px);
+      li{
+        line-height:rem-calc(26px);
+      }
+        .sub{
+          position: relative !important;
+          top: 0!important;
+          left: rem-calc(31px)!important;
+        }
+    }
+    .right {
+      margin-left: 0 !important;
+      display: inline;
       float: none !important;
     }
-    .item{
-      @include display-flex();
-      @include flex-direction(column !important);
-      @include align-items(center);
-      @include justify-content(center);
-      justify-content: center;
-      li:active ~ .sub{
-        display:block;
-      }
+    .item.right{
+      display: none;
     }
   }
-  .sub{
-    position: absolute!important;
-    top: rem-calc(29px)!important;
-    left: rem-calc(-23px)!important;
-  }
-  .icon{
-    @include display-flex();
-    @include justify-content(flex-end);
-    padding: rem-calc(7px);
-    background:rgba(112, 128, 144, 0.18);
-    @include box-shadow($box-shadow);
-        span{
-          font-size:rem-calc( 17px);
-          padding-right: rem-calc(4px);
-        }
-    }
+  //.sub {
+  //  position: absolute !important;
+  //  top: rem-calc(29px) !important;
+  //  left: rem-calc(-23px) !important;
+  //}
+
 }
-@media screen and (min-width:769px){
-  .icon{
-    display: none !important;
-  }
-}
-#switch{
-  display:none;
-}
-#switch:checked ~ nav{
-  display: block;
-  position: relative;
-}
+
+//importing extends for nav
+@import "extends/nav/navToggleSwitch";

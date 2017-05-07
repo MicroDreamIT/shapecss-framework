@@ -1,0 +1,89 @@
+nav .for-mobile {
+  display: none;
+  @include box-shadow(none !important);
+}
+//menu toggle
+@media screen and (max-width: 768px) {
+  //menu toggle before click
+  nav .for-mobile {
+    display: block;
+    position: relative;
+    width: 42px;
+    height: 23px;
+    padding: 7px;
+    transition: all 0.15s;
+    background: $lightgrey;
+    @include border-radius(2px);
+    border:1px solid #c1c1c1;
+    @include box-shadow(none !important);
+    outline: none;
+    margin: 5px;
+    &:after,
+    &:before{
+      content:'';
+      position: absolute;
+      display:block;
+      width: 42px;
+      height: 3px;
+      background:rgba(99, 99, 99, 0.51);
+      border-radius: 4px;
+    }
+    &:before {
+      top: 6px;
+      transition: all 0.35s ease-out;
+    }
+    &:after {
+      top: 17px;
+      @include box-shadow(0 11px rgba(99, 99, 99, 0.51));
+      transition: all 0.45s ease-out;
+    }
+    //menu toggle after click
+    &.open{
+      background: $lightgrey !important;
+      &:before,
+      &:after{
+        top: 23%;
+        margin-top: 10px;
+        background:rgba(99, 99, 99, 0.51);
+      }
+
+      &:before{
+        @include transform(rotate(45deg));
+      }
+      &:after  {
+        @include transform(rotate(-45deg));
+        @include box-shadow(none);
+      }
+    }
+  }
+
+
+
+  nav .show-menu {
+    @include display-flex(flex !important);
+    @include flex-direction(column);
+  }
+}
+
+@each $name,$value in $colors{
+  .for-mobile.bg-#{$name}{
+    background: $value;
+    border:1px solid $value + 50;
+    &:after,
+    &:before{
+      background:$value + 50;
+    }
+    &:after {
+      box-shadow: 0 11px $value + 50;
+    }
+    &.open{
+      background: $value !important;
+      &:before,
+      &:after{
+        top: 23%;
+        margin-top: 10px;
+        background:$value + 50;
+      }
+    }
+  }
+}

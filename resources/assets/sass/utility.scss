@@ -1,3 +1,7 @@
+.vedio{
+  border: rem-calc(1px) solid #ececec;
+  padding: rem-calc(8px) 0;
+}
 img{
   .center{
     margin:0 auto;
@@ -60,7 +64,24 @@ img{
 /* All the color loop must be placed in here
 // to minimize code complexities and weight
 // of this framework */
+
  @each $name,$value in $colors{
+   nav.bg-#{$name}{
+     .item{
+       .sub{
+         li{
+           a{
+             background:$value;
+             &:hover{
+               background:$value - 25;
+             }
+           }
+         }
+       }
+     }
+
+   }
+
    footer.bg-#{$name},
    nav.bg-#{$name},
    ul.bg-#{$name}{
@@ -168,4 +189,7 @@ img{
 
 .with-shadow{
  @include box-shadow($shadow);
+}
+.show-block{
+  display: block !important;
 }

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -74,8 +74,10 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component_Accordion__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component_Modal__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__component_Tab__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_shapes_Circle__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__component_Tab__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_shapes_Circle__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_Nav__ = __webpack_require__(4);
+
 
 
 
@@ -88,6 +90,7 @@ window.onload = function () {
   new __WEBPACK_IMPORTED_MODULE_1__component_Modal__["a" /* Modal */]();
   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__component_Tab__["a" /* getTab */])();
   new __WEBPACK_IMPORTED_MODULE_3__component_shapes_Circle__["a" /* Circle */]();
+  new __WEBPACK_IMPORTED_MODULE_4__component_Nav__["a" /* Nav */]();
 };
 
 /***/ }),
@@ -190,6 +193,45 @@ var Modal = function Modal() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Nav; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Nav = function () {
+    function Nav() {
+        _classCallCheck(this, Nav);
+
+        this._nav = document.getElementsByTagName("nav");
+        for (var i = 0; i < this._nav.length; i++) {
+            this.processNav(this._nav[i]);
+        }
+    }
+
+    _createClass(Nav, [{
+        key: "processNav",
+        value: function processNav(nav) {
+            var navButtons = nav.getElementsByClassName("for-mobile")[0];
+            if (navButtons) {
+                navButtons.addEventListener('click', function (e) {
+                    navButtons.classList.toggle('open');
+                    var ulItems = nav.getElementsByClassName('item');
+                    for (var j = 0; j < ulItems.length; j++) {
+                        ulItems[j].classList.toggle('show-menu');
+                    }
+                });
+            }
+        }
+    }]);
+
+    return Nav;
+}();
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = getTab;
 function applyTabChange(getDivTarget, getLoadOnTargetId) {
     var getTabDiv = document.getElementById(getDivTarget);
@@ -241,7 +283,7 @@ function getTab() {
 }
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -336,7 +378,7 @@ var Circle = function () {
 }();
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);

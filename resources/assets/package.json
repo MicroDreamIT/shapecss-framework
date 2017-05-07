@@ -1,0 +1,19 @@
+{
+  "name": "shapecss",
+  "version":"2.0.1",
+  "description":"shapeCss is the modern, stylish and flexbox css framework",
+  "main":"resources/assets/js/shape.js",
+  "main":"resources/assets/sass/main.scss",
+  "repository":{
+  "type":"git",
+  "url":"git+https://github.com/MicroDreamIT/shapecss-framework"
+},
+
+"keywords":[
+  "css framework",
+  "shape generator",
+  "light css framework"
+],
+"author":"MicroDreamIT <info@microdreamit.com> (https://microdreamit.com)",
+"license":"MIT"
+}
