@@ -12,8 +12,15 @@
   </p>
 
 </p>
+## Table of contents
+- [Quick start](#quick-start)
+- [Status](#status)
+- [What's included](#whats-included)
+- [Bugs and feature requests](#bugs-and-feature-requests)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Community](#community)
 
-Shapecss is lightweight but heavy components css framework:
 
 ### NPM
 
