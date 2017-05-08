@@ -30,13 +30,15 @@
 - Clone the repo: `git clone https://github.com/MicroDreamIT/shapecss-framework.git`
 - install with [npm](https://www.npmjs.com): `npm install shapecss`
 - install with [bower](https://bower.io): `bower install shapecss`
+- install with [composer](https://packagist.org): `composer require microdreamit/shapecss`
 - Entry javascript, `resources/assets/js/shape.js`
 - Entry scss, `resources/assets/sass/main.scss`
+
 ## Status
 
 [![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/shapecss)
-[![Join the chat at https://gitter.im/jgthms/bulma](https://badges.gitter.im/jgthms/bulma.svg)](https://gitter.im/shapecss/shapecss)
-
+[![Join the chat at https://gitter.im/shapecss/shapecss](https://badges.gitter.im/jgthms/bulma.svg)](https://gitter.im/shapecss/shapecss)
+[![Look at packagist at https://packagist.org/packages/microdreamit/shapecss](https://img.shields.io/packagist/v/mnapoli/PHP-DI.svg)](https://packagist.org/packages/microdreamit/shapecss)
 
 ## What's included
 
