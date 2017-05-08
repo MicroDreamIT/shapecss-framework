@@ -1,10 +1,9 @@
 <p align="center">
 <a href="https://shapecss.com">
-<img src="https://www.shapecss.com/images/svg/logo.svg" width=72 height=72>
 </a>
 
-![Alt text](https://www.shapecss.com/images/svg/logo.svg)
-<img src="https://www.shapecss.com/images/svg/logo.svg">
+![shapecss](https://www.shapecss.com/images/svg/logo.svg)
+<img src="https://www.shapecss.com/images/svg/logo.svg" width="200px">
 
 <h3 align="center">Shapecss</h3>
 
