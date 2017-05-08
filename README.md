@@ -3,8 +3,8 @@
 <img src="https://www.shapecss.com/images/svg/logo.svg" width=72 height=72>
 </a>
 
-![Alt text](https://rawgithub.com/potherca/StackOverflow/gh-pages/question.13808020.include-an-svg-hosted-on-github-in-markdown/controllers_brief.svg)
-<img src="https://rawgithub.com/potherca/StackOverflow/gh-pages/question.13808020.include-an-svg-hosted-on-github-in-markdown/controllers_brief.svg">
+![Alt text](https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/logo/logo.svg)
+<img src="https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/logo/logo.svg">
 
 <h3 align="center">Shapecss</h3>
 
