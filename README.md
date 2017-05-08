@@ -3,8 +3,8 @@
 <img src="https://www.shapecss.com/images/svg/logo.svg" width=72 height=72>
 </a>
 
-![Alt text](https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/logo/logo.svg)
-<img src="https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/logo/logo.svg">
+![Alt text](https://www.shapecss.com/images/svg/logo.svg)
+<img src="https://www.shapecss.com/images/svg/logo.svg">
 
 <h3 align="center">Shapecss</h3>
 
