@@ -1,4 +1,32 @@
 {
     "name": "microdreamit/shapecss",
-    "description": "Shapecss, modern stylish css framework"
+    "description": "Shapecss, modern stylish css framework",
+    "keywords": [
+    "css",
+    "js",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+    "homepage": "https://shapecss.com",
+    "authors": {
+      "name": "Shahanur Sharif",
+      "email": "shahanur.sharif@gmail.com"
+    },
+    "support": {
+    "issues": "https://github.com/MicroDreamIT/shapecss-framework/issues"
+  },
+  "license": "MIT",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0.2"
+    }
+  },
+  "replace": {
+    "microdreamit/shapecss": "self.version"
+  }
+
 }

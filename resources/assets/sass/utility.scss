@@ -60,7 +60,10 @@ img{
   text-align: center;
 }
 
-
+strong,
+.strong{
+  font-weight: bold;
+}
 /* All the color loop must be placed in here
 // to minimize code complexities and weight
 // of this framework */
@@ -71,7 +74,7 @@ img{
        .sub{
          li{
            a{
-             background:$value;
+            background: $value;
              &:hover{
                background:$value - 25;
              }
@@ -79,7 +82,6 @@ img{
          }
        }
      }
-
    }
 
    footer.bg-#{$name},
@@ -96,7 +98,6 @@ img{
        };
      }
    }
-
    .card.#{$name},
    .alert.#{$name},
     .bg-#{$name}{
@@ -107,8 +108,8 @@ img{
     	@else {
     		color:$white !important;
     	}
-
     }
+
 
    .top-bar.bg-#{$name},
    .bg-#{$name}.copyright{
@@ -184,7 +185,7 @@ img{
   color: rgba(64, 64, 64, 0.74);
 }
 .with-border{
-  border:1px solid $lightgrey;
+  border:1px solid $lightgrey !important;
 }
 
 .with-shadow{
@@ -192,4 +193,7 @@ img{
 }
 .show-block{
   display: block !important;
+}
+.bg-transparent{
+  background: transparent !important;
 }

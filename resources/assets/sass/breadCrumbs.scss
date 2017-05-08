@@ -1,9 +1,10 @@
 
 .breadcrumb {
 	background: $lightgrey;
+	padding-left: rem-calc(5px);
 	li {
 		list-style: none;
-		display: inline-flex;
+		@include display-flex(inline-flex);
 		a {
 			padding: 10px 3px;
 			color: $default;

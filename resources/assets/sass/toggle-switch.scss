@@ -39,7 +39,7 @@
             border: rem-calc(1.5px) solid rgba(105, 105, 105, 0.18);
           }
       }
-      .switch.square{
+      .switch.box{
         @extend .switch;
         border-radius:rem-calc(2px);
         &:before{

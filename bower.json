@@ -1,6 +1,6 @@
 {
   "name": "shapecss",
-  "description": "shapeCss is the modern, stylish and flexbox css framework.",
+  "description": "shapeCss is a modern, stylish and flexbox css framework.",
   "keywords": [
     "css",
     "js",
@@ -11,7 +11,7 @@
     "framework",
     "web"
   ],
-  "version":"2.0.1",
+  "version":"2.0.2",
   "homepage": "https://shapecss.com",
   "license": "MIT",
   "moduleType": "globals",
@@ -29,8 +29,5 @@
     "Gruntfile.js",
     "node_modules",
     "test-infra"
-  ],
-  "dependencies": {
-    "laravel-mix": "^0.10.0"
-  }
+  ]
 }
