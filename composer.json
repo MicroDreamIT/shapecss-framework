@@ -18,12 +18,8 @@
     },
     "support": {
     "issues": "https://github.com/MicroDreamIT/shapecss-framework/issues"
-  },
-  "license": "MIT",
-  "extra": {
-    "branch-alias": {
-      "master": "*.*"
-    }
+  	},
+  "license": "MIT"
   },
   "replace": {
     "microdreamit/shapecss": "self.version"
