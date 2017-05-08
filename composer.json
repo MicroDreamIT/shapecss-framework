@@ -13,10 +13,12 @@
   ],
     "homepage": "https://shapecss.com",
     
-    "authors": {
-      "name": "Shahanur Sharif",
-      "email": "shahanur.sharif@gmail.com"
-    },
+    "authors": [
+    	{
+     	"name": "Shahanur Sharif",
+  		"email": "shahanur.sharif@gmail.com" 
+        }
+    ],
 
     "support": {
     "issues": "https://github.com/MicroDreamIT/shapecss-framework/issues"
@@ -27,5 +29,5 @@
   "replace": {
     "microdreamit/shapecss": "self.version"
   }
-  
+
 }
