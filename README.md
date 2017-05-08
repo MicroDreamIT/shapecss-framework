@@ -3,7 +3,8 @@
 <img src="https://www.shapecss.com/images/svg/logo.svg" width=72 height=72>
 </a>
 
-[![Shapecss: a Flexbox CSS framework](https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/logo/logo.svg)](https://shapecss.com)
+![Alt text](https://rawgithub.com/potherca/StackOverflow/gh-pages/question.13808020.include-an-svg-hosted-on-github-in-markdown/controllers_brief.svg)
+<img src="https://rawgithub.com/potherca/StackOverflow/gh-pages/question.13808020.include-an-svg-hosted-on-github-in-markdown/controllers_brief.svg">
 
 <h3 align="center">Shapecss</h3>
 
