@@ -1,8 +1,9 @@
 <p align="center">
 <a href="https://shapecss.com">
 <img src="https://www.shapecss.com/images/svg/logo.svg" width=72 height=72>
-[![Shapecss: a Flexbox CSS framework](https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/logo/logo.svg)](https://shapecss.com)
 </a>
+
+[![Shapecss: a Flexbox CSS framework](https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/logo/logo.svg)](https://shapecss.com)
 
 <h3 align="center">Shapecss</h3>
 
