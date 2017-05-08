@@ -2,7 +2,6 @@
 <a href="https://shapecss.com">
 </a>
 
-![shapecss](https://www.shapecss.com/images/svg/logo.svg)
 <img src="https://www.shapecss.com/images/svg/logo.svg" width="200px">
 
 <h3 align="center">Shapecss</h3>
