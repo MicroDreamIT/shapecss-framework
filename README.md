@@ -39,7 +39,6 @@
 [![npm version](https://img.shields.io/badge/npm-2.0.1-brightgreen.svg)](https://www.npmjs.com/package/shapecss)
 [![Join the chat at https://gitter.im/shapecss/shapecss](https://badges.gitter.im/jgthms/bulma.svg)](https://gitter.im/shapecss/shapecss)
 [![Look at packagist at https://packagist.org/packages/microdreamit/shapecss](https://img.shields.io/packagist/v/mnapoli/PHP-DI.svg)](https://packagist.org/packages/microdreamit/shapecss)
-[![License at https://github.com/MicroDreamIT/shapecss-framework/blob/master/LICENSE](https://img.shields.io/bower/l/bootstrap.svg)](https://github.com/MicroDreamIT/shapecss-framework/blob/master/LICENSE)
 
 ## What's included
 
