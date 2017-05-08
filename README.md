@@ -34,6 +34,7 @@
 ## Status
 
 [![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/shapecss)
+[![Join the chat at https://gitter.im/jgthms/bulma](https://badges.gitter.im/jgthms/bulma.svg)](https://gitter.im/shapecss/shapecss)
 
 
 ## What's included
