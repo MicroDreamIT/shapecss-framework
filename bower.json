@@ -1,0 +1,36 @@
+{
+  "name": "shapecss",
+  "description": "shapeCss is the modern, stylish and flexbox css framework.",
+  "keywords": [
+    "css",
+    "js",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "version":"2.0.1",
+  "homepage": "https://shapecss.com",
+  "license": "MIT",
+  "moduleType": "globals",
+  "main": [
+    "resources/assets/sass/main.scss",
+    "resources/assets/js/shape.js"
+  ],
+  "ignore": [
+    "/.*",
+    "_config.yml",
+    "CNAME",
+    "composer.json",
+    "CONTRIBUTING.md",
+    "docs",
+    "Gruntfile.js",
+    "node_modules",
+    "test-infra"
+  ],
+  "dependencies": {
+    "laravel-mix": "^0.10.0"
+  }
+}
