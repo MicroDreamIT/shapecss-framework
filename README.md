@@ -31,6 +31,7 @@
 - install with [npm](https://www.npmjs.com): `npm install shapecss`
 - install with [bower](https://bower.io): `bower install shapecss`
 - install with [composer](https://packagist.org): `composer require microdreamit/shapecss`
+- CDN request[jsDelivr](https://www.jsdelivr.com): `https://cdn.jsdelivr.net/npm/shapecss@2.0.2/public/css/shape.min.css`,`https://cdn.jsdelivr.net/npm/shapecss@2.0.2/public/js/shape.min.js` 
 - Entry javascript, `resources/assets/js/shape.js`
 - Entry scss, `resources/assets/sass/main.scss`
 
