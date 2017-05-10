@@ -17,7 +17,7 @@
 ## Table of contents
 
 - [Quick start](#quick-start)
-- [CDN](#CDN)
+- [CDN](#cdn)
 - [Status](#status)
 - [What's included](#whats-included)
 - [Documentation](#documentation)
