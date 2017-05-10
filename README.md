@@ -32,9 +32,9 @@
 #### Clone the repo: `git clone https://github.com/MicroDreamIT/shapecss-framework.git`
 
 ### Install with a package manager:
-#### [NPM](https://www.npmjs.com) `npm install shapecss`
+#### [NPM](https://www.npmjs.com/package/shapecss) `npm install shapecss`
 #### [Bower](https://bower.io) `bower install shapecss`
-#### [Composer](https://packagist.org) `composer require microdreamit/shapecss`
+#### [Composer](https://packagist.org/packages/microdreamit/shapecss) `composer require microdreamit/shapecss`
 
 - Entry javascript, `resources/assets/js/shape.js`
 - Entry scss, `resources/assets/sass/main.scss`
