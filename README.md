@@ -37,7 +37,7 @@
 
 ## CDN
 
-#Use javascript file bottom of the body tag.
+**Use javascript file bottom of the body tag.**
 
 ```
 
