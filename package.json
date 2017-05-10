@@ -1,6 +1,6 @@
 {
   "name": "shapecss",
-  "version":"2.0.2",
+  "version":"2.0.3",
   "description":"shapeCss is a modern, stylish and flexbox css framework",
   "main":"assets/js/shape.js",
   "style":"assets/sass/main.scss",

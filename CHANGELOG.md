@@ -1,5 +1,11 @@
 # Shapecss changelog
 
+## 2.0.3
+
+* adding fonts
+* fixing fonts public path
+* dist directory structure change
+
 ## 2.0.2
 
 * add bg-transparent helper class

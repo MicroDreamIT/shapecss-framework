@@ -13,9 +13,17 @@ const { mix } = require('laravel-mix');
 
 
 //for dev
+// mix.setPublicPath('public/');
+// mix.setResourceRoot('public/');
+
+mix.setResourceRoot('../');
+
 // mix.js('resources/assets/js/shape.js', 'public/js/shape.js')
 //    .sass('resources/assets/sass/main.scss', 'public/css/shape.css');
+
 
 //for production
 mix.js('resources/assets/js/shape.js', 'public/js/shape.min.js')
    .sass('resources/assets/sass/main.scss', 'public/css/shape.min.css');
+
+mix.copy('fonts', 'public/fonts');
