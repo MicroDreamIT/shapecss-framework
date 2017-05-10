@@ -1,6 +1,6 @@
 # Shapecss changelog
 
-## 2.0.3
+## 2.0.5
 
 * adding fonts
 * fixing fonts public path

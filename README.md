@@ -42,12 +42,12 @@
 ```
 
 <!-- Latest compiled and minified CSS & JS -->
-https://cdn.jsdelivr.net/npm/shapecss@2.0.2/public/css/shape.min.css
-https://cdn.jsdelivr.net/npm/shapecss@2.0.2/public/js/shape.min.js
+https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/css/shape.min.css
+https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/js/shape.min.js
 
 <!-- Latest compiled and unminified CSS & JS -->
-https://cdn.jsdelivr.net/npm/shapecss@2.0.2/public/css/shape.css
-https://cdn.jsdelivr.net/npm/shapecss@2.0.2/public/js/shape.js
+https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/css/shape.css
+https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/js/shape.js
 
 ```
 

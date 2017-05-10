@@ -11,7 +11,7 @@
     "framework",
     "web"
   ],
-  "version":"2.0.3",
+  "version":"2.0.5",
   "homepage": "https://shapecss.com",
   "license": "MIT",
   "moduleType": "globals",
