@@ -26,12 +26,16 @@
 - [Copyright and license](#copyright-and-license)
 
 ## Quick start
+### Download the latest release:
+#### [Minified CSS](https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/css/shape.min.css)
+#### [Javascript bundle](https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/js/shape.min.js)
+#### Clone the repo: `git clone https://github.com/MicroDreamIT/shapecss-framework.git`
 
-- [Download the latest release.](https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/css/shape.min.css, https://raw.githubusercontent.com/MicroDreamIT/shapecss-framework/master/public/js/shape.min.js)
-- Clone the repo: `git clone https://github.com/MicroDreamIT/shapecss-framework.git`
-- install with [npm](https://www.npmjs.com): `npm install shapecss`
-- install with [bower](https://bower.io): `bower install shapecss`
-- install with [composer](https://packagist.org): `composer require microdreamit/shapecss`
+### Install with a package manager:
+#### [NPM](https://www.npmjs.com/package/shapecss) `npm install shapecss`
+#### [Bower](https://bower.io) `bower install shapecss`
+#### [Composer](https://packagist.org/packages/microdreamit/shapecss) `composer require microdreamit/shapecss`
+
 - Entry javascript, `resources/assets/js/shape.js`
 - Entry scss, `resources/assets/sass/main.scss`
 
@@ -39,7 +43,7 @@
 
 **Use javascript file bottom of the body tag.**
 
-```
+```js
 
 <!-- Latest compiled and minified CSS & JS -->
 https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/css/shape.min.css
