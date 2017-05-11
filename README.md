@@ -46,12 +46,12 @@
 ```js
 
 <!-- Latest compiled and minified CSS & JS -->
-https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/css/shape.min.css
-https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/js/shape.min.js
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/css/shape.min.css">
+<script src="https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/js/shape.min.js" async></script>
 
 <!-- Latest compiled and unminified CSS & JS -->
-https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/css/shape.css
-https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/js/shape.js
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/css/shape.css">
+<script src="https://cdn.jsdelivr.net/npm/shapecss@2.0.5/public/js/shape.js" async></script>
 
 ```
 
