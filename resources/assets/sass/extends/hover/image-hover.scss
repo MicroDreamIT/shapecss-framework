@@ -1,0 +1,52 @@
+.img-hover{
+  position: relative;
+  min-width:200px;
+  height:100%;
+//flex items
+  @include display-flex();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(space-around);
+  @include align-items(stretch);
+  @include align-content(center);
+  img{
+    @include transition(opacity .2s ease-in-out);
+    flex:1 0 auto;
+  }
+  .hover-content{
+    position: absolute;
+    @include align-self(center);
+    visibility: hidden;
+  }
+  &:hover img, &:focus img{
+    opacity: .3;
+  }
+  &:hover .hover-content, &:focus .hover-content{
+   visibility: visible;
+  }
+}
+
+
+//slide-down
+.img-hover.slide-down{
+
+  .hover-content{
+
+  }
+
+  img{
+    @include transition(top .2s ease-in-out);
+  }
+
+  &:hover img, &:focus img{
+
+  }
+}
+
+//slide-up
+
+
+//slide-right
+
+
+//slide-left

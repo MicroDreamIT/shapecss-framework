@@ -1,0 +1,188 @@
+//for version 2.1.0
+[title]{
+  color: $primary;
+}
+.hover,
+[title]{
+  position: relative;
+}
+
+[title]:before,
+[title]:after,
+.hover:before,
+.hover:after {
+  position: absolute;
+  visibility: hidden;
+ @include filter(opacity(20%));
+  @include transition(opacity 0.2s ease-in-out,
+          visibility 0.2s ease-in-out,
+          transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24));
+  @include transform(translate3d(0,0,0));
+  pointer-events: none;
+}
+
+[title]:hover:before,
+[title]:hover:after,
+[title]:focus:before,
+[title]:focus:after,
+.hover:hover:before,
+.hover:hover:after,
+.hover:focus:before,
+.hover:focus:after {
+  visibility: visible;
+  @include filter(opacity(100%));
+}
+/* Base styles for the hover's directional arrow */
+.hover:before,
+[title]:before{
+  z-index: 1000;
+  border: 6px solid transparent;
+  background: transparent;
+  content:"";
+}
+
+/* Base styles for the tooltip's content area */
+.hover:after,
+[title]:after {
+  z-index: 1000;
+  padding: 8px;
+  width: 160px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(title);
+  font-size: 14px;
+  line-height: 1.2;
+  @include border-radius(2px);
+}
+/* Top (default) */
+[title]:before,
+[title]:after,
+.hover:before,
+.hover:after,
+.hover.top:before,
+.hover.top:after {
+  bottom: 100%;
+  left: 50%;
+}
+
+[title]:before,
+.hover:before,
+.hover.top:before {
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #000;
+  border-top-color: hsla(0, 0%, 20%, 0.9);
+}
+
+/* Horizontally align top/bottom tooltips */
+[title]:after,
+.hover:after,
+.hover.top:after {
+  margin-left: -80px;
+}
+
+[title]:hover:before,
+[title]:hover:after,
+[title]:focus:before,
+[title]:focus:after,
+.hover:hover:before,
+.hover:hover:after,
+.hover:focus:before,
+.hover:focus:after,
+.hover.top:hover:before,
+.hover.top:hover:after,
+.hover.top:focus:before,
+.hover.top:focus:after {
+  @include transform(translateY(-12px));
+}
+
+/* Left */
+.hover.left:before,
+.hover.left:after {
+  right: 100%;
+  bottom: 50%;
+  left: auto;
+}
+
+.hover.left:before {
+  margin-left: 0;
+  margin-right: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-left-color: #000;
+  border-left-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.hover.left:hover:before,
+.hover.left:hover:after,
+.hover.left:focus:before,
+.hover.left:focus:after {
+  @include transform(translateX(-12px));
+}
+
+/* Bottom */
+.hover.bottom:before,
+.hover.bottom:after {
+  top: 100%;
+  bottom: auto;
+  left: 50%;
+}
+
+.hover.bottom:before {
+  margin-top: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-bottom-color: #000;
+  border-bottom-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.hover.bottom:hover:before,
+.hover.bottom:hover:after,
+.hover.bottom:focus:before,
+.hover.bottom:focus:after {
+  @include transform(translateY(12px));
+}
+
+/* Right */
+.hover.right:before,
+.hover.right:after {
+  bottom: 50%;
+  left: 100%;
+}
+
+.hover.right:before {
+  margin-bottom: 0;
+  margin-left: -12px;
+  border-top-color: transparent;
+  border-right-color: #000;
+  border-right-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.hover.right:hover:before,
+.hover.right:hover:after,
+.hover.right:focus:before,
+.hover.right:focus:after {
+  @include transform(translateX(12px));
+}
+
+/* Move directional arrows down a bit for left/right tooltips */
+.hover.left:before,
+.hover.right:before {
+  top: 3px;
+}
+
+/* Vertically center tooltip content for left/right tooltips */
+.hover.left:after,
+.hover.right:after {
+  margin-left: 0;
+  margin-bottom: -16px;
+}
+
+.hover.right{
+  margin-left: 0;
+  display: inline;
+  float: none;
+}
+
+@import "extends/hover/image-hover";

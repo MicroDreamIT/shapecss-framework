@@ -1,0 +1,86 @@
+/* All the color loop must be placed in here
+// to minimize code complexities and weight
+// of this framework */
+
+@each $name,$value in $colors{
+  nav.bg-#{$name}{
+    .item{
+      .sub{
+        li{
+          a{
+            background: $value;
+            &:hover{
+              background:$value - 25;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer.bg-#{$name},
+  nav.bg-#{$name},
+  ul.bg-#{$name}{
+    li{
+      a{
+        @if $name == 'default' {
+          color:$dark !important;
+        }
+        @else {
+          color:$white !important;
+        }
+      };
+    }
+  }
+
+  .hover.bg-#{$name}:after,
+  .list-group.striped.#{$name} :nth-child(odd),
+  .card.#{$name},
+  .alert.#{$name},
+  .bg-#{$name}{
+    @include background($value !important);
+    @if $name == 'default' {
+      color:$dark !important;
+    }
+    @else {
+      color:$white !important;
+    }
+  }
+
+
+  .top-bar.bg-#{$name},
+  .bg-#{$name}.copyright{
+    @include background($value - 20 !important);
+    @if $name == 'default' {
+      color:$dark !important;
+    }
+    @else {
+      color:$white !important;
+    }
+  }
+
+
+  .hover.bg-#{$name}:before,
+  [title]:after{
+    border-top-color: $value;
+  }
+
+  .hover.left.bg-#{$name}:before,
+  [title]:after{
+    border-top-color: transparent !important;
+    border-left-color: $value;
+  }
+
+  .hover.right.bg-#{$name}:before,
+  [title]:after{
+    border-top-color: transparent !important;
+    border-right-color: $value;
+  }
+  .hover.bottom.bg-#{$name}:before,
+  [title]:after{
+    border-top-color: transparent !important;
+    border-bottom-color: $value;
+  }
+
+}
+
+//end of color loops
