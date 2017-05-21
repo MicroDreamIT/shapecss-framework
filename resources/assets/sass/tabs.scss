@@ -1,13 +1,11 @@
-
-  ul.tab-selector {
+ul.tab-selector {
     @include display-flex();
     list-style-type: none;
     @include flex(1 100%);
     margin: 0;
     padding: 0;
     overflow: hidden;
-    @include box-shadow($box-shadow);
-    //border: 1px solid #ccc;
+    @include box-shadow($shadow);
     background-color: #f1f1f1;
     li {
       cursor:pointer;
@@ -27,18 +25,15 @@
         background-color: #ccc;
       }
       float: left;
-
     }
   }
-
-
 
   .tab-content {
     &.with-border{
       @include flex(1);
       border: 1px solid #ccc;
     }
-    div{
+    [id]{
       display: none;
       padding: 6px 12px;
       border-top: none;
@@ -46,8 +41,8 @@
         display: block;
       }
     }
-
   }
+
   ul.tab-selector.vertical{
     @include flex(none);
     @include flex-direction(column);

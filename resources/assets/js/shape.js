@@ -1,3 +1,10 @@
+/*!
+ * Shapecss v2.0
+ * Copyright 2016-2017 Shahanur Sharif.
+ * http://microdreamit.com
+ * Licensed under MIT (https://github.com/MicroDreamIT/Shapecss/blob/master/LICENSE)
+ */
+
 'use strict';
 
 import {Accordion} from "./component/Accordion";

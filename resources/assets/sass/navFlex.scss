@@ -2,6 +2,7 @@ nav {
   @include display-flex();
   @include align-items(center);
   @include flex-wrap(wrap);
+  align-items: stretch;
   .logo {
     max-height: rem-calc(90px);
     max-width: rem-calc(220px);

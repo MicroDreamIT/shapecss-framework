@@ -9,9 +9,11 @@
     "responsive",
     "front-end",
     "framework",
-    "web"
+    "web",
+    "web framework",
+    "web frontend framework"
   ],
-  "version":"2.0.5",
+  "version":"2.1.0",
   "homepage": "https://shapecss.com",
   "license": "MIT",
   "moduleType": "globals",

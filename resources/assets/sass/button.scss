@@ -16,7 +16,7 @@ button.primary{
   border: none;
   @include border-radius(2px);
   @include transition(.3s ease-out);
-  @include box-shadow($box-shadow);
+  @include box-shadow($shadow);
   &:hover{
 
     @include transform(translateY(-2px));
@@ -44,7 +44,7 @@ button.primary{
       }
 		  &:hover{
 		    background: $value - 25;
-            @include box-shadow($box-shadow);
+            @include box-shadow($shadow);
 		  }
 	}
 }

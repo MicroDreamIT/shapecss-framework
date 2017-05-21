@@ -21,7 +21,10 @@ img{
   @extend .img-bordered;
   @include border-radius(50%);
 }
-
+.hide,
+.hidden{
+  display: none;
+}
 .innerGap{
   padding: 10px;
 }
@@ -64,67 +67,7 @@ strong,
 .strong{
   font-weight: bold;
 }
-/* All the color loop must be placed in here
-// to minimize code complexities and weight
-// of this framework */
 
- @each $name,$value in $colors{
-   nav.bg-#{$name}{
-     .item{
-       .sub{
-         li{
-           a{
-            background: $value;
-             &:hover{
-               background:$value - 25;
-             }
-           }
-         }
-       }
-     }
-   }
-
-   footer.bg-#{$name},
-   nav.bg-#{$name},
-   ul.bg-#{$name}{
-     li{
-       a{
-         @if $name == 'default' {
-           color:$dark !important;
-         }
-         @else {
-           color:$white !important;
-         }
-       };
-     }
-   }
-   .card.#{$name},
-   .alert.#{$name},
-    .bg-#{$name}{
-      @include background($value !important);
-    	@if $name == 'default' {
-    		color:$dark !important;
-    	}
-    	@else {
-    		color:$white !important;
-    	}
-    }
-
-
-   .top-bar.bg-#{$name},
-   .bg-#{$name}.copyright{
-     @include background($value - 20 !important);
-    	@if $name == 'default' {
-    		color:$dark !important;
-    	}
-    	@else {
-    		color:$white !important;
-    	}
-    }
-
- }
-
-//end of color loops
 .gutter{
   margin-top: 20px;
 }
@@ -196,4 +139,15 @@ strong,
 }
 .bg-transparent{
   background: transparent !important;
+}
+.hover[class*="bg-"]{
+  background: transparent !important;
+  color: $primary!important;
+}
+.hover.bg-default:after{
+  background:#f1f1f1 !important;
+}
+
+.fixed{
+  position: fixed;
 }

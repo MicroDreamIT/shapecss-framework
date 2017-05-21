@@ -1,5 +1,14 @@
 # Shapecss changelog
 
+## 2.1.0
+
+* image hover
+* adjust shadow
+* tab js improve
+* hover new format implement
+* alert box shadow changed
+
+
 ## 2.0.5
 
 * adding fonts

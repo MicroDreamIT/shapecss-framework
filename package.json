@@ -1,6 +1,6 @@
 {
   "name": "shapecss",
-  "version":"2.0.5",
+  "version":"2.1.0",
   "description":"shapeCss is a modern, stylish and flexbox css framework",
   "main":"assets/js/shape.js",
   "style":"assets/sass/main.scss",
@@ -9,9 +9,16 @@
   "url":"git+https://github.com/MicroDreamIT/shapecss-framework"
 },
 "keywords":[
-  "css framework",
-  "shape generator",
-  "light css framework"
+    "css",
+    "js",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web",
+    "web framework",
+    "web frontend framework"
 ],
 "author":"MicroDreamIT <info@microdreamit.com> (https://microdreamit.com)",
 "license":"MIT",
@@ -27,8 +34,5 @@
     "cross-env": "^3.2.3",
     "laravel-mix": "^0.10.0",
     "lodash": "^4.17.4"
-  },
-  "dependencies": {
-    "laravel-mix": "^0.10.0"
   }
 }

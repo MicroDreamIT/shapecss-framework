@@ -80,6 +80,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_shapes_Parallelogram__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__component_shapes_Rectangle__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__component_shapes_Square__ = __webpack_require__(9);
+/*!
+ * Shapecss v2.0
+ * Copyright 2016-2017 Shahanur Sharif.
+ * http://microdreamit.com
+ * Licensed under MIT (https://github.com/MicroDreamIT/Shapecss/blob/master/LICENSE)
+ */
+
 
 
 
