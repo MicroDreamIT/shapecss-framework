@@ -1,6 +1,6 @@
 # Shapecss changelog
 
-## 2.1.1
+## 2.1.2
 
 * image hover
 * adjust shadow
