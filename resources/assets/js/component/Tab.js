@@ -40,6 +40,17 @@
                     removeActiveClassOnclick(e.target.parentElement.getAttribute('div-target'));
                     applyTabChange(e.target.parentElement.getAttribute('div-target'), e.target.getAttribute('tab-target'))
                 }
+                else{
+
+                    //look for other member
+                    let queryEls= e.target.parentElement;
+                    let findLi = queryEls.closest("li");
+                    let findLiTab = queryEls.closest("li").getAttribute("tab-target");
+                    findLi.classList.add('active');
+                    let targetedDiv =findLi.parentElement.getAttribute('div-target');
+                    removeActiveClassOnclick(targetedDiv);
+                    applyTabChange(targetedDiv, findLiTab);
+                }
                 
             });
         }
