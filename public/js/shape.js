@@ -290,6 +290,16 @@ function getTab() {
                 e.target.classList.add('active');
                 removeActiveClassOnclick(e.target.parentElement.getAttribute('div-target'));
                 applyTabChange(e.target.parentElement.getAttribute('div-target'), e.target.getAttribute('tab-target'));
+            } else {
+
+                //look for other member
+                var queryEls = e.target.parentElement;
+                var findLi = queryEls.closest("li");
+                var findLiTab = queryEls.closest("li").getAttribute("tab-target");
+                findLi.classList.add('active');
+                var targetedDiv = findLi.parentElement.getAttribute('div-target');
+                removeActiveClassOnclick(targetedDiv);
+                applyTabChange(targetedDiv, findLiTab);
             }
         });
     };

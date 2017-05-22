@@ -6,8 +6,10 @@ nav .for-mobile {
 @media screen and (max-width: 768px) {
   //menu toggle before click
   nav .for-mobile {
+    right: 34px;
+    margin-top: 10px !important;
     display: block;
-    position: relative;
+    position: absolute;
     width: 42px;
     height: 23px;
     padding: 7px;
@@ -17,7 +19,6 @@ nav .for-mobile {
     border:1px solid #c1c1c1;
     @include box-shadow(none !important);
     outline: none;
-    margin: 5px;
     &:after,
     &:before{
       content:'';
@@ -87,3 +88,4 @@ nav .for-mobile {
     }
   }
 }
+

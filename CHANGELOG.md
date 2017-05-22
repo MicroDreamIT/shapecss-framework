@@ -1,5 +1,11 @@
 # Shapecss changelog
 
+## 2.1.3
+
+* nav toggle fix
+* nav defult alignment
+* fix loop import scss
+
 ## 2.1.2
 
 * image hover

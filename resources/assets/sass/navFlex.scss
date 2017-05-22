@@ -1,8 +1,7 @@
 nav {
   @include display-flex();
-  @include align-items(center);
+
   @include flex-wrap(wrap);
-  align-items: stretch;
   .logo {
     max-height: rem-calc(90px);
     max-width: rem-calc(220px);
@@ -84,6 +83,7 @@ nav {
     //display: none;
     @include transition(all 0.5s ease-in);
     .item {
+      @include align-items(center);
       display: none;
       align-items: center;
       margin-bottom: rem-calc(10px);
@@ -104,6 +104,7 @@ nav {
     .item.right{
       display: none;
     }
+
   }
   //.sub {
   //  position: absolute !important;
@@ -112,6 +113,7 @@ nav {
   //}
 
 }
+
 
 //importing extends for nav
 @import "extends/nav/navToggleSwitch";
