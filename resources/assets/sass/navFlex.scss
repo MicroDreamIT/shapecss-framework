@@ -115,5 +115,15 @@ nav {
 }
 
 
+.item.right{
+  .sub{
+    left:0;
+    min-width: 0;
+    li{
+      min-width: 0;
+    }
+  }
+}
+
 //importing extends for nav
 @import "extends/nav/navToggleSwitch";

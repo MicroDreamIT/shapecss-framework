@@ -18,6 +18,9 @@ const { mix } = require('laravel-mix');
 
 mix.setResourceRoot('../');
 
+mix.js('resources/assets/js/component/Accordion.js', 'src/js/Accordion.js');
+
+
 mix.js('resources/assets/js/shape.js', 'public/js/shape.js')
    .sass('resources/assets/sass/main.scss', 'public/css/shape.css');
 

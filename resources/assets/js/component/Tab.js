@@ -17,18 +17,30 @@
         let getSelector,
             getDivTarget,
             getListItems,
-            getActiveClass;
+            getActiveClass,
+            mouseOn;
 
         getSelector = document.querySelectorAll('.tab-selector');
         for(let i=0; i<getSelector.length;i++){
             getDivTarget = getSelector[i].getAttribute('div-target');
-
+            mouseOn = getSelector[i].getAttribute('mousehover');
             getActiveClass = getSelector[i].getElementsByClassName('active');
             if(getActiveClass.length)
                 applyTabChange(getDivTarget, getActiveClass[0].getAttribute('tab-target'));
 
 
-            getSelector[i].addEventListener('click', e =>{
+            getSelector[i].addEventListener( 'click', function(e){
+                listenToEvent(e);
+            });
+            
+            if(mouseOn){
+                getSelector[i].addEventListener('mouseover', function(e){
+                    listenToEvent(e);
+                });
+            }
+
+
+            function listenToEvent(e) {
                 getListItems = getSelector[i].getElementsByClassName('active');
                 for(let j=0; j<getListItems.length;j++){
                     getListItems[j].classList.remove('active');
@@ -38,21 +50,23 @@
                 if(getParent.contains('tab-selector')){
                     e.target.classList.add('active');
                     removeActiveClassOnclick(e.target.parentElement.getAttribute('div-target'));
-                    applyTabChange(e.target.parentElement.getAttribute('div-target'), e.target.getAttribute('tab-target'))
+                    applyTabChange(e.target.parentElement.getAttribute('div-target'), e.target.getAttribute('tab-target'));
                 }
-                else{
+                if(!getParent.contains('tab-selector')){
 
                     //look for other member
                     let queryEls= e.target.parentElement;
                     let findLi = queryEls.closest("li");
-                    let findLiTab = queryEls.closest("li").getAttribute("tab-target");
-                    findLi.classList.add('active');
-                    let targetedDiv =findLi.parentElement.getAttribute('div-target');
-                    removeActiveClassOnclick(targetedDiv);
-                    applyTabChange(targetedDiv, findLiTab);
+                    if(findLi){
+                        let findLiTab = findLi.getAttribute("tab-target");
+                        findLi.classList.add('active');
+                        let targetedDiv =findLi.parentElement.getAttribute('div-target');
+                        removeActiveClassOnclick(targetedDiv);
+                        applyTabChange(targetedDiv, findLiTab);
+                    }
+
                 }
-                
-            });
+            }
         }
 
     }

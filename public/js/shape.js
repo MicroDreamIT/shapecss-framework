@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -72,56 +72,7 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component_Accordion__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component_Modal__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__component_Tab__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_Nav__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_shapes_Circle__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_shapes_Parallelogram__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__component_shapes_Rectangle__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__component_shapes_Square__ = __webpack_require__(9);
-/*!
- * Shapecss v2.0
- * Copyright 2016-2017 Shahanur Sharif.
- * http://microdreamit.com
- * Licensed under MIT (https://github.com/MicroDreamIT/Shapecss/blob/master/LICENSE)
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-window.onload = function () {
-  new __WEBPACK_IMPORTED_MODULE_0__component_Accordion__["a" /* Accordion */]();
-  new __WEBPACK_IMPORTED_MODULE_1__component_Modal__["a" /* Modal */]();
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__component_Tab__["a" /* getTab */])();
-  new __WEBPACK_IMPORTED_MODULE_3__component_Nav__["a" /* Nav */]();
-  new __WEBPACK_IMPORTED_MODULE_4__component_shapes_Circle__["a" /* Circle */]();
-  new __WEBPACK_IMPORTED_MODULE_5__component_shapes_Parallelogram__["a" /* Parallelogram */]();
-  new __WEBPACK_IMPORTED_MODULE_6__component_shapes_Rectangle__["a" /* Rectangle */]();
-  new __WEBPACK_IMPORTED_MODULE_7__component_shapes_Square__["a" /* Square */]();
-};
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Accordion; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Accordion", function() { return Accordion; });
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -169,6 +120,51 @@ var Accordion = function () {
 }();
 
 /***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component_Accordion__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component_Modal__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__component_Tab__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_Nav__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_shapes_Circle__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_shapes_Parallelogram__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__component_shapes_Rectangle__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__component_shapes_Square__ = __webpack_require__(9);
+/*!
+ * Shapecss v2.0
+ * Copyright 2016-2017 Shahanur Sharif.
+ * http://microdreamit.com
+ * Licensed under MIT (https://github.com/MicroDreamIT/Shapecss/blob/master/LICENSE)
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.onload = function () {
+  new __WEBPACK_IMPORTED_MODULE_0__component_Accordion__["Accordion"]();
+  new __WEBPACK_IMPORTED_MODULE_1__component_Modal__["a" /* Modal */]();
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__component_Tab__["a" /* getTab */])();
+  new __WEBPACK_IMPORTED_MODULE_3__component_Nav__["a" /* Nav */]();
+  new __WEBPACK_IMPORTED_MODULE_4__component_shapes_Circle__["a" /* Circle */]();
+  new __WEBPACK_IMPORTED_MODULE_5__component_shapes_Parallelogram__["a" /* Parallelogram */]();
+  new __WEBPACK_IMPORTED_MODULE_6__component_shapes_Rectangle__["a" /* Rectangle */]();
+  new __WEBPACK_IMPORTED_MODULE_7__component_shapes_Square__["a" /* Square */]();
+};
+
+/***/ }),
+/* 2 */,
 /* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -269,17 +265,28 @@ function getTab() {
     var getSelector = void 0,
         getDivTarget = void 0,
         getListItems = void 0,
-        getActiveClass = void 0;
+        getActiveClass = void 0,
+        mouseOn = void 0;
 
     getSelector = document.querySelectorAll('.tab-selector');
 
     var _loop = function _loop(i) {
         getDivTarget = getSelector[i].getAttribute('div-target');
-
+        mouseOn = getSelector[i].getAttribute('mousehover');
         getActiveClass = getSelector[i].getElementsByClassName('active');
         if (getActiveClass.length) applyTabChange(getDivTarget, getActiveClass[0].getAttribute('tab-target'));
 
         getSelector[i].addEventListener('click', function (e) {
+            listenToEvent(e);
+        });
+
+        if (mouseOn) {
+            getSelector[i].addEventListener('mouseover', function (e) {
+                listenToEvent(e);
+            });
+        }
+
+        function listenToEvent(e) {
             getListItems = getSelector[i].getElementsByClassName('active');
             for (var j = 0; j < getListItems.length; j++) {
                 getListItems[j].classList.remove('active');
@@ -290,18 +297,21 @@ function getTab() {
                 e.target.classList.add('active');
                 removeActiveClassOnclick(e.target.parentElement.getAttribute('div-target'));
                 applyTabChange(e.target.parentElement.getAttribute('div-target'), e.target.getAttribute('tab-target'));
-            } else {
+            }
+            if (!getParent.contains('tab-selector')) {
 
                 //look for other member
                 var queryEls = e.target.parentElement;
                 var findLi = queryEls.closest("li");
-                var findLiTab = queryEls.closest("li").getAttribute("tab-target");
-                findLi.classList.add('active');
-                var targetedDiv = findLi.parentElement.getAttribute('div-target');
-                removeActiveClassOnclick(targetedDiv);
-                applyTabChange(targetedDiv, findLiTab);
+                if (findLi) {
+                    var findLiTab = findLi.getAttribute("tab-target");
+                    findLi.classList.add('active');
+                    var targetedDiv = findLi.parentElement.getAttribute('div-target');
+                    removeActiveClassOnclick(targetedDiv);
+                    applyTabChange(targetedDiv, findLiTab);
+                }
             }
-        });
+        }
     };
 
     for (var i = 0; i < getSelector.length; i++) {
@@ -700,10 +710,10 @@ var Square = function () {
 }();
 
 /***/ }),
-/* 10 */
+/* 10 */,
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(0);
 module.exports = __webpack_require__(1);
 
 
