@@ -103,7 +103,7 @@ label{
     }
   }
 
-  [class^="input"].disabled{
+  [class^="input-"].disabled{
     background: rgba(128, 128, 128, 0.11);
   }
 }
@@ -152,3 +152,6 @@ input[type=checkbox],input[type=radio]{
         }
 }
 
+input[type="text"]:disabled {
+    background: #dddddd;
+}
