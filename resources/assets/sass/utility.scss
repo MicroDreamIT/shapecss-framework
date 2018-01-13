@@ -163,3 +163,9 @@ strong,
 .fixed{
   position: fixed;
 }
+
+//flex
+.flex-left{
+  @extend .display-flex;
+  @include justify-content(flex-end);
+}
