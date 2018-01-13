@@ -64,6 +64,19 @@ img{
   text-align: center;
 }
 
+.bg-white{
+  background: white !important;
+}
+.text-right{
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+.text-justify{
+  text-align: justify;
+}
 strong,
 .strong{
   font-weight: bold;
@@ -91,9 +104,7 @@ strong,
 .no-shadow{
   @include box-shadow(none !important);
 }
-.text-justify{
-  text-align: justify;
-}
+
 .full-width{
   @include flex(1 100%);
 }
