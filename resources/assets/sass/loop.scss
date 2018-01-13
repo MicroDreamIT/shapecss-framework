@@ -84,3 +84,37 @@
 }
 
 //end of color loops
+
+
+@for $i from 0 through 20 {
+  .#{mr}-#{$i}{
+    margin: $i + px !important;
+  }
+  .#{mrt}-#{$i}{
+    margin-top: $i + px !important;
+  }
+  .#{mrl}-#{$i}{
+    margin-left: $i + px !important;
+  }
+  .#{mrr}-#{$i}{
+    margin-right: $i + px !important;
+  }
+  .#{mrb}-#{$i}{
+    margin-bottom: $i + px !important;
+  }
+  .#{pd}-#{$i}{
+    padding: $i + px !important;
+  }
+  .#{pdt}-#{$i}{
+    padding-top: $i + px !important;
+  }
+  .#{pdl}-#{$i}{
+    padding-left: $i + px !important;
+  }
+  .#{pdr}-#{$i}{
+    padding-right: $i + px !important;
+  }
+  .#{pdb}-#{$i}{
+    padding-bottom: $i + px !important;
+  }
+}
