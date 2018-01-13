@@ -118,3 +118,9 @@
     padding-bottom: $i + px !important;
   }
 }
+//font-size
+@for $i from 9 through 40{
+  .#{fs}-#{$i}{
+    font-size: $i + px !important;
+  }
+}
