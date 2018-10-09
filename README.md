@@ -9,7 +9,7 @@
   <p align="center">
     Shapecss, modern stylish css framework
     <br>
-    <a href="https://shapecss.com"><strong>Visit Shapecss &raquo;</strong></a>
+    <a href="https://shapecss.microdreamit.com"><strong>Visit Shapecss &raquo;</strong></a>
   </p>
 
 </p>
