@@ -2,7 +2,7 @@
 <a href="https://shapecss.com">
 </a>
 
-<img src="https://www.shapecss.com/images/svg/logo.svg" width="200px">
+<img src="https://shapecss.microdreamit.com/images/svg/logo.svg" width="200px">
 
 <h3 align="center">Shapecss</h3>
 
@@ -89,7 +89,7 @@ shapecss-framework/
 
 ## Documentation
 
-Shapecss's documentation, included in this repo in the root directory, is built with [Laravel](https://laravel.com). The docs may also be run locally. <https://shapecss.com>
+Shapecss's documentation, included in this repo in the root directory, is built with [Laravel](https://laravel.com). The docs may also be run locally. <https://shapecss.microdreamit.com>
 
 ## Community
 
