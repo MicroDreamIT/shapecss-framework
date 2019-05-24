@@ -11,12 +11,28 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: [
-                    'style-loader',
-                    'css-loader'
+                    'file-loader'
                 ]
+            },
+            {
+                test: /\.scss$/,
+                use: [{
+                    loader: "style-loader", options: {
+                        sourceMap: true
+                    }
+                }, {
+                    loader: "css-loader", options: {
+                        sourceMap: true
+                    }
+                }, {
+                    loader: "sass-loader", options: {
+                        sourceMap: true
+                    }
+                }]
             }
+
         ]
     }
 };
