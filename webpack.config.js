@@ -1,9 +1,21 @@
-const path = require('path');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
     entry: './src/js/shape.js',
     mode: "development",
     devtool: "inline-source-map",
+    devServer: {
+        contentBase:'./dist'
+    },
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: "./views/index.html",
+            filename: "./button.html"
+        })
+    ],
     output: {
         filename: 'shapecss.js',
         path: path.resolve(__dirname, 'dist')
