@@ -1,0 +1,27 @@
+{
+  "name": "shapecss-framework",
+  "version": "3.0.0",
+  "description": "<p align=\"center\"> <a href=\"http://shapecss.microdraemit.com\"> </a>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MicroDreamIT/shapecss-framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MicroDreamIT/shapecss-framework/issues"
+  },
+  "homepage": "https://github.com/MicroDreamIT/shapecss-framework#readme",
+  "devDependencies": {
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
