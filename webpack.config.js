@@ -40,7 +40,8 @@ module.exports = {
                     }
                 }, {
                     loader: "sass-loader", options: {
-                        sourceMap: true
+                        sourceMap: true,
+                        includePaths:["./test.scss", "./test.css"]
                     }
                 }]
             },
