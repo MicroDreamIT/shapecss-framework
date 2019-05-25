@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     entry: './src/js/shape.js',
@@ -45,14 +46,11 @@ module.exports = {
                     }
                 }]
             },
-            // {
-            //     use: {
-            //         loader:'babel-loader',
-            //         options: { presets: ['es2015'] }
-            //     },
-            //     test: /\.js$/,
-            //     exclude: /node_modules/
-            // }
+            {
+                test: /\.scss$/,
+                include: path.resolve(__dirname, ""),
+                use: []
+            },
         ]
     }
 };
