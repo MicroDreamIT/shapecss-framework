@@ -11,46 +11,50 @@ module.exports = {
         contentBase:'./dist'
     },
     plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            template: "./views/button.html",
-            filename: "./button.html"
+        new MiniCssExtractPlugin({
+            filename:"style.css",
+            chunkFilename:"[name].css"
         })
+        // new CleanWebpackPlugin(),
+        // new HtmlWebpackPlugin({
+        //     template: "./views/button.html",
+        //     filename: "./button.html"
+        // })
     ],
     output: {
         filename: 'shapecss.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: "/dist"
     },
     module: {
         rules: [
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: [
-                    'file-loader'
+                test:/\.(s*)css$/,
+                use:[
+                    MiniCssExtractPlugin.loader,
+                    {
+                        options: {
+                            modules:true,
+                            sourceMap:true,
+                            importLoader:2
+                        }
+                    },
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
                 ]
             },
-            {
-                test: /\.scss$/,
-                use: [{
-                    loader: "style-loader", options: {
-                        sourceMap: true
-                    }
-                }, {
-                    loader: "css-loader", options: {
-                        sourceMap: true
-                    }
-                }, {
-                    loader: "sass-loader", options: {
-                        sourceMap: true,
-                        includePaths:["./test.scss", "./test.css"]
-                    }
-                }]
-            },
-            {
-                test: /\.scss$/,
-                include: path.resolve(__dirname, ""),
-                use: []
-            },
+            // {
+            //     test: /\.(woff|woff2|eot|ttf|otf)$/,
+            //     use: [
+            //         'file-loader'
+            //     ]
+            // },
+            // {
+            //     test: /\.scss$/,
+            //     include: path.resolve(__dirname, ""),
+            //     use: []
+            // },
         ]
     }
 };

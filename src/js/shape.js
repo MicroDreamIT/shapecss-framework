@@ -16,7 +16,7 @@ import {Circle} from "./component/shapes/Circle";
 import {Parallelogram} from "./component/shapes/Parallelogram";
 import {Rectangle} from "./component/shapes/Rectangle";
 import {Square} from "./component/shapes/Square";
-
+const css = require('../../test.scss')
 
 window.onload = function () {
   new Accordion();
