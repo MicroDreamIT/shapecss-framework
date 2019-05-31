@@ -7,6 +7,7 @@
 
 'use strict';
 
+
 import {Accordion} from "./component/Accordion";
 import {Modal} from "./component/Modal";
 import {getTab} from "./component/Tab";
@@ -16,7 +17,9 @@ import {Circle} from "./component/shapes/Circle";
 import {Parallelogram} from "./component/shapes/Parallelogram";
 import {Rectangle} from "./component/shapes/Rectangle";
 import {Square} from "./component/shapes/Square";
-const css = require('../../test.scss')
+
+const css = require('../sass/main.scss')
+// import '../test.scss'
 
 window.onload = function () {
   new Accordion();
