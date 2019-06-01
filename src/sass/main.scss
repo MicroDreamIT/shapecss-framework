@@ -7,9 +7,11 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
  // component import
 
-body{
+html, body{
   font-family: "PT Serif";
 }
+
+
 
 @import "assets/compass";
 @import "assets/juice";
@@ -48,23 +50,4 @@ body{
 @import 'buttonCircle';
 @import "toggle-switch";
 @import "utility";
-
- 	  //.presentation{
-		//  	height:auto;
-		//  	padding:20px;
-		//  	margin:auto;
-		//  	text-align: center;
-		//  	h1{
-		//		font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-		//		font-size: 50px;
-		//		padding: 8px 0px;
-		//		text-align: center;
-		//		text-transform: uppercase;
-		//		color: #202020;
-		//		letter-spacing: .1em;
-		//		text-shadow: -1px -1px 1px #111111, 2px 2px 1px #363636;
-		//  	}
-      //
-	  //}
-
 	 
